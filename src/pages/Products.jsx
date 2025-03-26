@@ -58,7 +58,7 @@ function Products() {
               }}
               transition={{
                 x: {
-                  duration: currentProducts.length * 1/2,
+                  duration: currentProducts.length,
                   repeat: Infinity,
                   repeatType: "loop",
                   ease: "linear",
