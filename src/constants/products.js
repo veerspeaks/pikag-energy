@@ -1,57 +1,74 @@
 // products.js
 
+import solar_panel from "../../public/products/solar-panel.png";
+
+
+// indoor products
+import ledspikelight from "../../public/products/ledspikelight.png";
+import ledsurfacelight from "../../public/products/ledsurfacelight.png";
+import ledpanellight from "../../public/products/ledpanellight.png";
+import leddownlight from "../../public/products/leddownlight.png";
+import ledsurfacelight2 from "../../public/products/ledsurfacelight2.png";
+import ledpanellight_round from "../../public/products/ledpanellight-round.png";
+import rechargablebulb from "../../public/products/rechargablebulb.png";
+import rechargabletubelight from "../../public/products/rechargabletubelight.png";
+import slim_backlit_panel_light from "../../public/products/slim-backlit-panel-light.png";
+
+
+// outdoor products
+import ledstreetlight from "../../public/products/ledstreetlight.png";
+import ac_led_flood_lights from "../../public/products/ac-led-flood-lights.png";
+import ledhighbaylight from "../../public/products/ledhighbaylight.png";
+import ledwellglasslight from "../../public/products/ledwellglasslight.png";
+import solarintegratedstreetlight from "../../public/products/solarintegratedstreetlight.png";
+import solar_all_in_one_stree_lights from "../../public/products/solar-all-in-one-stree-lights.png";
+import solarintegratedstreetlight2 from "../../public/products/solarintegratedstreetlight2.png";
+
+
 const INDOOR_PRODUCTS = [
   {
     name: "LED Spike Light",
-    image:
-      "https://images.unsplash.com/photo-1590608897129-79d2766a5da8?w=800&auto=format&fit=crop&q=80",
+    image: ledspikelight,
     description:
       "5W with 420lm luminous flux, dimension Φ58x75mm. Perfect for accent lighting.",
   },
   {
     name: "LED Surface Light (Square)",
-    image:
-      "https://images.unsplash.com/photo-1499358517822-d8578907a095?w=800&auto=format&fit=crop&q=80",
+    image: ledsurfacelight,
     description:
       "Available from 6W (360lm, 122x122x35mm) to 24W (1800lm, 300x300x35mm).",
   },
   {
     name: "LED Panel Light (Square)",
-    image:
-      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=800&auto=format&fit=crop&q=80",
+    image:ledpanellight,
     description:
       "Ranges from 3W (150lm, 85x85x21mm) to 24W (1800lm, 300x300x21mm).",
   },
   {
     name: "LED Down Light",
-    image:
-      "https://images.unsplash.com/photo-1507149833265-60c372daea22?w=800&auto=format&fit=crop&q=80",
+    image:leddownlight,
     description: "9W producing 900lm, size 90x70mm with a hole size of 75mm.",
   },
   {
     name: "LED Surface Light (Round)",
-    image:
-      "https://images.unsplash.com/photo-1590608897129-79d2766a5da8?w=800&auto=format&fit=crop&q=80",
+    image:ledsurfacelight2,
     description:
       "Variants from 6W (360lm, 122x35mm) to 24W (1800lm, 300x35mm).",
   },
   {
     name: "Rechargeable Bulb",
-    image:
-      "https://images.unsplash.com/photo-1499358517822-d8578907a095?w=800&auto=format&fit=crop&q=80",
+    image: rechargablebulb,
     description: "9W bulb with backup of 4 hours, producing 900lm.",
   },
   {
     name: "Slim/Backlit Panel Light",
-    image:
-      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=800&auto=format&fit=crop&q=80",
+    image:slim_backlit_panel_light,
     description:
       "Available in multiple sizes from 2ft to 4ft, over 90% driver efficiency.",
   },
   {
     name: "DC Rechargeable Tube Light",
-    image:
-      "https://images.unsplash.com/photo-1507149833265-60c372daea22?w=800&auto=format&fit=crop&q=80",
+    image: rechargabletubelight,
     description:
       "5W tube light with a battery backup, solar panel included, 115 lm/W efficacy.",
   },
@@ -60,50 +77,43 @@ const INDOOR_PRODUCTS = [
 const OUTDOOR_PRODUCTS = [
   {
     name: "AC LED Street Lights",
-    image:
-      "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2f6?w=800&auto=format&fit=crop&q=80",
+    image: ledstreetlight,
     description:
       "Robust street lights ranging from 15W to 150W, designed for city roads, highways, and residential complexes.",
   },
   {
     name: "AC LED Flood Lights (Down Choke & Back Choke)",
-    image:
-      "https://images.unsplash.com/photo-1507246207829-732ed643ea6f?w=800&auto=format&fit=crop&q=80",
+    image: ac_led_flood_lights,
     description:
       "High-performance flood lights available from 20W to 250W, suitable for wide area lighting.",
   },
   {
     name: "AC LED High Bay Lights",
-    image:
-      "https://images.unsplash.com/photo-1594382551103-d9b6dcf2c86d?w=800&auto=format&fit=crop&q=80",
+    image: ledhighbaylight,
     description:
       "Ideal for industrial environments, available from 70W to 250W.",
   },
   {
     name: "AC LED Well Glass Lights",
-    image:
-      "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=800&auto=format&fit=crop&q=80",
+    image: ledwellglasslight,
     description:
       "Durable and robust well glass lights perfect for harsh environments.",
   },
   {
     name: "Solar Integrated Street Light",
-    image:
-      "https://images.unsplash.com/photo-1572099606223-6e29045d2a9f?w=800&auto=format&fit=crop&q=80",
+    image: solarintegratedstreetlight,
     description:
       "Self-sustaining street lighting with integrated solar panels for efficient dusk to dawn lighting.",
   },
   {
     name: "Solar All-in-one Street Light",
-    image:
-      "https://images.unsplash.com/photo-1611346717951-32c702c578cc?w=800&auto=format&fit=crop&q=80",
+    image: solar_all_in_one_stree_lights,
     description:
       "Compact and easy to install solar street lights with a complete all-in-one design.",
   },
   {
     name: "Solar All-in-two Street Light",
-    image:
-      "https://images.unsplash.com/photo-1623177223515-3bbd608ae03d?w=800&auto=format&fit=crop&q=80",
+    image: solarintegratedstreetlight2,
     description:
       "Versatile solar street lighting system featuring separate panel and light for optimized placement.",
   },
@@ -112,8 +122,7 @@ const OUTDOOR_PRODUCTS = [
 const SOLAR_PRODUCTS = [
   {
     name: "Solar Panel - High Efficiency",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80",
+    image: solar_panel,
     description:
       "High-efficiency monocrystalline solar panels for residential and commercial use.",
   },
@@ -153,21 +162,18 @@ const ALL_PRODUCTS = [
   ...OUTDOOR_PRODUCTS,
   {
     name: "LED Panel Light",
-    image:
-      "https://images.unsplash.com/photo-1565819428385-cf377321357b?w=800&auto=format&fit=crop&q=80",
+    image: ledpanellight_round,
     description: "Energy-efficient LED panel lighting for commercial spaces.",
   },
   {
     name: "Industrial LED High Bay",
-    image:
-      "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&auto=format&fit=crop&q=80",
+    image: ledhighbaylight ,
     description:
       "High-output LED lighting solutions for industrial facilities and warehouses.",
   },
   {
     name: "Smart LED Bulb",
-    image:
-      "https://images.unsplash.com/photo-1560435650-41c3c3ed5417?w=800&auto=format&fit=crop&q=80",
+    image: rechargablebulb,
     description:
       "IoT-enabled smart LED bulbs with remote control and scheduling capabilities.",
   },
