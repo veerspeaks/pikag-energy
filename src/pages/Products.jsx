@@ -5,64 +5,58 @@ import { motion } from 'framer-motion';
 const SOLAR_PRODUCTS = [
   {
     id: 1,
-    name: 'Solar Panel - High Efficiency',
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80',
-    description: 'High-efficiency monocrystalline solar panels for residential and commercial use.'
+    name: 'Solar Integrated Street Light',
+    image: 'https://images.unsplash.com/photo-1623177223515-3bbd608ae03d?w=800&auto=format&fit=crop&q=80',
+    description: 'Advanced integrated solar street lighting with built-in panels and smart controls for optimal performance.'
   },
   {
     id: 2,
-    name: 'Solar Inverter System',
-    image: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=800&auto=format&fit=crop&q=80',
-    description: 'State-of-the-art inverter technology for optimal energy conversion.'
+    name: 'Solar All-in-one Street Light',
+    image: 'https://images.unsplash.com/photo-1611346717951-32c702c578cc?w=800&auto=format&fit=crop&q=80',
+    description: 'Complete all-in-one solar street lighting solution with integrated battery and motion sensors.'
   },
   {
     id: 3,
-    name: 'Solar Home System',
-    image: 'https://images.unsplash.com/photo-1611346717951-32c702c578cc?w=800&auto=format&fit=crop&q=80',
-    description: 'Complete solar solution for residential properties with battery storage.'
+    name: 'Solar Pump',
+    image: 'https://images.unsplash.com/photo-1628917996825-3b8cc981aad1?w=800&auto=format&fit=crop&q=80',
+    description: 'High-efficiency solar water pumping systems for agricultural and commercial applications.'
   },
   {
     id: 4,
-    name: 'Solar Street Light',
-    image: 'https://images.unsplash.com/photo-1623177223515-3bbd608ae03d?w=800&auto=format&fit=crop&q=80',
-    description: 'Autonomous solar-powered street lighting with dusk-to-dawn operation.'
-  },
-  {
-    id: 5,
-    name: 'Solar Water Pump',
-    image: 'https://images.unsplash.com/photo-1628917996825-3b8cc981aad1?w=800&auto=format&fit=crop&q=80',
-    description: 'Energy-efficient solar water pumping solutions for agriculture and residential use.'
+    name: 'Solar Power Plants',
+    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80',
+    description: 'Custom-designed solar power plants for residential, commercial, and industrial installations.'
   }
 ];
 
 const ALL_PRODUCTS = [
   ...SOLAR_PRODUCTS,
   {
-    id: 6,
+    id: 5,
     name: 'LED Panel Light',
     image: 'https://images.unsplash.com/photo-1565819428385-cf377321357b?w=800&auto=format&fit=crop&q=80',
     description: 'Energy-efficient LED panel lighting for commercial spaces.'
   },
   {
-    id: 7,
+    id: 6,
     name: 'Industrial LED High Bay',
     image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&auto=format&fit=crop&q=80',
     description: 'High-output LED lighting solutions for industrial facilities and warehouses.'
   },
   {
-    id: 8,
+    id: 7,
     name: 'Smart LED Bulb',
     image: 'https://images.unsplash.com/photo-1560435650-41c3c3ed5417?w=800&auto=format&fit=crop&q=80',
     description: 'IoT-enabled smart LED bulbs with remote control and scheduling capabilities.'
   },
   {
-    id: 9,
+    id: 8,
     name: 'PCB Manufacturing Service',
     image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop&q=80',
     description: 'Custom PCB design and manufacturing services for electronics projects.'
   },
   {
-    id: 10,
+    id: 9,
     name: 'Energy Monitoring System',
     image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop&q=80',
     description: 'Advanced monitoring systems for tracking and optimizing energy consumption.'
