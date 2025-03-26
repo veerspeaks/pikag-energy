@@ -48,7 +48,7 @@ function About() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
             <div className="relative" data-aos="fade-right">
               <div className="absolute -inset-2">
-                <div className="w-full h-full mx-auto opacity-30 blur-lg filter bg-gradient-to-r from-primary to-secondary"></div>
+                <div className="w-full h-full mx-auto opacity-30 blur-lg filter"></div>
               </div>
               <div className="relative">
                 <h2 className="text-4xl font-extrabold text-gray-900 mb-8">Our Story</h2>

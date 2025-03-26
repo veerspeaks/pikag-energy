@@ -58,13 +58,17 @@ function Products() {
               }}
               transition={{
                 x: {
-                  duration: currentProducts.length * 1/2,
+                  duration: currentProducts.length,
                   repeat: Infinity,
                   repeatType: "loop",
                   ease: "linear",
                 },
               }}
             >
+              {currentProducts.map((product, index) => (
+                <Product key={index} id={index} product={product} />
+              ))}
+              {/* duplidate */}
               {currentProducts.map((product, index) => (
                 <Product key={index} id={index} product={product} />
               ))}
