@@ -68,6 +68,10 @@ function Products() {
               {currentProducts.map((product, index) => (
                 <Product key={index} id={index} product={product} />
               ))}
+              {/* duplidate */}
+              {currentProducts.map((product, index) => (
+                <Product key={index} id={index} product={product} />
+              ))}
 
             </motion.div>
           </div>

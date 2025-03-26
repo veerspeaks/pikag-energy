@@ -1,6 +1,8 @@
 // products.js
 
 import solar_panel from "../../public/products/solar-panel.png";
+import solarpumps from "../../public/products/solarpumps.png";
+
 
 
 // indoor products
@@ -126,31 +128,29 @@ const SOLAR_PRODUCTS = [
     description:
       "High-efficiency monocrystalline solar panels for residential and commercial use.",
   },
-  {
-    name: "Solar Inverter System",
-    image:
-      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=800&auto=format&fit=crop&q=80",
-    description:
-      "State-of-the-art inverter technology for optimal energy conversion.",
-  },
-  {
-    name: "Solar Home System",
-    image:
-      "https://images.unsplash.com/photo-1611346717951-32c702c578cc?w=800&auto=format&fit=crop&q=80",
-    description:
-      "Complete solar solution for residential properties with battery storage.",
-  },
+  // {
+  //   name: "Solar Inverter System",
+  //   image:
+  //     "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=800&auto=format&fit=crop&q=80",
+  //   description:
+  //     "State-of-the-art inverter technology for optimal energy conversion.",
+  // },
+  // {
+  //   name: "Solar Home System",
+  //   image:
+  //     "https://images.unsplash.com/photo-1611346717951-32c702c578cc?w=800&auto=format&fit=crop&q=80",
+  //   description:
+  //     "Complete solar solution for residential properties with battery storage.",
+  // },
   {
     name: "Solar Street Light",
-    image:
-      "https://images.unsplash.com/photo-1623177223515-3bbd608ae03d?w=800&auto=format&fit=crop&q=80",
+    image: solarintegratedstreetlight,
     description:
       "Autonomous solar-powered street lighting with dusk-to-dawn operation.",
   },
   {
     name: "Solar Water Pump",
-    image:
-      "https://images.unsplash.com/photo-1628917996825-3b8cc981aad1?w=800&auto=format&fit=crop&q=80",
+    image: solarpumps,
     description:
       "Energy-efficient solar water pumping solutions for agriculture and residential use.",
   },
@@ -177,20 +177,20 @@ const ALL_PRODUCTS = [
     description:
       "IoT-enabled smart LED bulbs with remote control and scheduling capabilities.",
   },
-  {
-    name: "PCB Manufacturing Service",
-    image:
-      "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop&q=80",
-    description:
-      "Custom PCB design and manufacturing services for electronics projects.",
-  },
-  {
-    name: "Energy Monitoring System",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop&q=80",
-    description:
-      "Advanced monitoring systems for tracking and optimizing energy consumption.",
-  },
+  // {
+  //   name: "PCB Manufacturing Service",
+  //   image:
+  //     "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop&q=80",
+  //   description:
+  //     "Custom PCB design and manufacturing services for electronics projects.",
+  // },
+  // {
+  //   name: "Energy Monitoring System",
+  //   image:
+  //     "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop&q=80",
+  //   description:
+  //     "Advanced monitoring systems for tracking and optimizing energy consumption.",
+  // },
 ];
 
 export { SOLAR_PRODUCTS, ALL_PRODUCTS, INDOOR_PRODUCTS, OUTDOOR_PRODUCTS };
