@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
