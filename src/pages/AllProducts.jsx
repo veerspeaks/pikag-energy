@@ -37,7 +37,7 @@ function AllProducts() {
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-40 sm:h-48 object-cover"
+                        className="w-full h-40 sm:h-44 object-cover"
                       />
                       <div className="absolute top-0 right-0 bg-primary/80 text-white text-xs font-medium px-2 py-1 m-2 rounded-full capitalize">
                         {category}
@@ -45,7 +45,7 @@ function AllProducts() {
                     </div>
                     <div className="p-4">
                       <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 line-clamp-1">{product.name}</h3>
-                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2 mb-3 h-8">{product.description}</p>
+                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2 mb-3 h-14">{product.description}</p>
                       <button className="w-full text-center px-3 py-1.5 bg-primary text-white text-xs sm:text-sm rounded-full hover:bg-primary/90 transition-all duration-300">
                         View Details
                       </button>
