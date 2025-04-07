@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useParams } from 'react-router-dom';
 import Product from '../components/Product';
 import ProductHero from '../components/products-components/ProductHero';
 import CTA from '../components/products-components/CTA';
@@ -12,6 +12,18 @@ function Products({productsMap, productTypes, pageName}) {
   const [activeTab, setActiveTab] = useState(location.state?.selectedTab || productTypes[0]);
   const [currentProducts, setCurrentProducts] = useState(productsMap[activeTab]);
 
+  // Key effect: re-initialize state when props change (different product page)
+  useEffect(() => {
+    // Reset active tab and current products when pageName changes
+    setActiveTab(productTypes[0]);
+    setCurrentProducts(productsMap[productTypes[0]]);
+    
+    // Refresh animations
+    if (window.AOS) {
+      window.AOS.refresh();
+    }
+  }, [pageName, productsMap, productTypes]);
+
   useEffect(() => {
     // Refresh AOS animations when the active tab changes
     if (window.AOS) {
@@ -21,28 +33,33 @@ function Products({productsMap, productTypes, pageName}) {
 
   useEffect(() => {
     // Handle tab selection from navigation
-    if (location.state?.selectedTab) {
+    if (location.state?.selectedTab && productsMap[location.state.selectedTab]) {
       setActiveTab(location.state.selectedTab);
       setCurrentProducts(productsMap[location.state.selectedTab]);
     }
-  }, [location.state]);
+  }, [location.state, productsMap]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     setCurrentProducts(productsMap[tab]);
   };
 
+  // Force scroll to top when navigating between product pages
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageName]);
+
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Banner */}
-      <ProductHero pageName={pageName} />
+      {/* <ProductHero pageName={pageName} /> */}
 
       {/* Dynamic Tab Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex flex-wrap justify-center gap-3 sm:space-x-4 mb-8 sm:mb-12">
           {productTypes.map((type) => (
             <button
-              key={type}
+              key={`${pageName}-${type}`}
               onClick={() => handleTabChange(type)}
               className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-medium rounded-full transition-all duration-300 ${activeTab === type
                 ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg'
@@ -62,6 +79,7 @@ function Products({productsMap, productTypes, pageName}) {
 
           <div className="relative overflow-hidden">
             <motion.div
+              key={`${pageName}-${activeTab}-carousel`}
               className="flex"
               animate={{
                 x: [-currentProducts.length * 100, 0],
@@ -76,11 +94,11 @@ function Products({productsMap, productTypes, pageName}) {
               }}
             >
               {currentProducts.map((product, index) => (
-                <Product key={index} id={index} product={product} />
+                <Product key={`${pageName}-${activeTab}-${index}`} id={index} product={product} />
               ))}
               {/* duplicate */}
               {currentProducts.map((product, index) => (
-                <Product key={`dup-${index}`} id={index} product={product} />
+                <Product key={`${pageName}-${activeTab}-dup-${index}`} id={index} product={product} />
               ))}
             </motion.div>
           </div>
@@ -102,7 +120,7 @@ function Products({productsMap, productTypes, pageName}) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {currentProducts.slice(0, 3).map((product, index) => (
               <div
-                key={`featured-${index}`}
+                key={`${pageName}-featured-${index}`}
                 className="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300"
                 data-aos="fade-up"
                 data-aos-delay={product.id * 100}
