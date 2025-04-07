@@ -27,7 +27,7 @@ import solar_all_in_one_stree_lights from "../../public/products/solar-all-in-on
 import solarintegratedstreetlight2 from "../../public/products/solarintegratedstreetlight2.png";
 
 
-const INDOOR_PRODUCTS = [
+const PIKAG_INDOOR_PRODUCTS = [
   {
     name: "LED Spike Light",
     image: ledspikelight,
@@ -76,7 +76,7 @@ const INDOOR_PRODUCTS = [
   },
 ];
 
-const OUTDOOR_PRODUCTS = [
+const PIKAG_OUTDOOR_PRODUCTS = [
   {
     name: "AC LED Street Lights",
     image: ledstreetlight,
@@ -121,7 +121,7 @@ const OUTDOOR_PRODUCTS = [
   },
 ];
 
-const SOLAR_PRODUCTS = [
+const PIKAG_SOLAR_PRODUCTS = [
   {
     name: "Solar Panel - High Efficiency",
     image: solar_panel,
@@ -156,10 +156,10 @@ const SOLAR_PRODUCTS = [
   },
 ];
 
-const ALL_PRODUCTS = [
-  ...SOLAR_PRODUCTS,
-  ...INDOOR_PRODUCTS,
-  ...OUTDOOR_PRODUCTS,
+const PIKAG_ALL_PRODUCTS = [
+  ...PIKAG_SOLAR_PRODUCTS,
+  ...PIKAG_INDOOR_PRODUCTS,
+  ...PIKAG_OUTDOOR_PRODUCTS,
   {
     name: "LED Panel Light",
     image: ledpanellight_round,
@@ -193,4 +193,4 @@ const ALL_PRODUCTS = [
   // },
 ];
 
-export { SOLAR_PRODUCTS, ALL_PRODUCTS, INDOOR_PRODUCTS, OUTDOOR_PRODUCTS };
+export { PIKAG_SOLAR_PRODUCTS, PIKAG_ALL_PRODUCTS, PIKAG_INDOOR_PRODUCTS, PIKAG_OUTDOOR_PRODUCTS };

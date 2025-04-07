@@ -5,12 +5,12 @@ import Product from '../components/Product';
 import ProductHero from '../components/products-components/ProductHero';
 import CTA from '../components/products-components/CTA';
 
-import { PRODUCTS_MAP, PRODUCT_TYPES } from '../constants/product_types';
+import { PIKAG_PRODUCTS_MAP, PIKAG_PRODUCT_TYPES } from '../constants/product_types';
 
-function Products() {
+function Products({productsMap, productTypes, pageName}) {
   const location = useLocation();
-  const [activeTab, setActiveTab] = useState(location.state?.selectedTab || PRODUCT_TYPES[0]);
-  const [currentProducts, setCurrentProducts] = useState(PRODUCTS_MAP[activeTab]);
+  const [activeTab, setActiveTab] = useState(location.state?.selectedTab || productTypes[0]);
+  const [currentProducts, setCurrentProducts] = useState(productsMap[activeTab]);
 
   useEffect(() => {
     // Refresh AOS animations when the active tab changes
@@ -23,24 +23,24 @@ function Products() {
     // Handle tab selection from navigation
     if (location.state?.selectedTab) {
       setActiveTab(location.state.selectedTab);
-      setCurrentProducts(PRODUCTS_MAP[location.state.selectedTab]);
+      setCurrentProducts(productsMap[location.state.selectedTab]);
     }
   }, [location.state]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setCurrentProducts(PRODUCTS_MAP[tab]);
+    setCurrentProducts(productsMap[tab]);
   };
 
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Banner */}
-      <ProductHero />
+      <ProductHero pageName={pageName} />
 
       {/* Dynamic Tab Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex flex-wrap justify-center gap-3 sm:space-x-4 mb-8 sm:mb-12">
-          {PRODUCT_TYPES.map((type) => (
+          {productTypes.map((type) => (
             <button
               key={type}
               onClick={() => handleTabChange(type)}
@@ -88,7 +88,7 @@ function Products() {
           {/* View All Button */}
           <div className="mt-8 mb-12 text-center">
             <Link 
-              to="/all-products" 
+              to={`/all-products/${pageName}`} 
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-md transform hover:scale-105 transition-all duration-300"
             >
               View All Products

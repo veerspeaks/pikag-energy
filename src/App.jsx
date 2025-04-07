@@ -10,6 +10,10 @@ import Products from './pages/Products';
 import AllProducts from './pages/AllProducts';
 import Footer from "./components/Footer";
 
+
+import { PIKAG_PRODUCTS_MAP, PIKAG_PRODUCT_TYPES } from './constants/product_types';
+import { OMRON_PRODUCTS_MAP, OMRON_PRODUCT_TYPES } from './constants/product_types';
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -25,8 +29,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/all-products" element={<AllProducts />} />
+        <Route path="/products/pikag" element={<Products productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
+        <Route path="/products/omron" element={<Products productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />
+        <Route path="/all-products/pikag" element={<AllProducts productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
+        <Route path="/all-products/omron" element={<AllProducts productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />
       </Routes>
       <Footer />
     </div>
