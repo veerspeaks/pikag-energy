@@ -28,12 +28,7 @@ const ProductHero = () => {
                                     From cutting-edge solar solutions to energy-efficient LED lighting, explore our comprehensive range of sustainable energy products.
                                 </p>
                                 <div className="mt-6 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
-                                    <button
-                                        onClick={handleSolarClick}
-                                        className="inline-flex items-center px-6 sm:px-8 py-2.5 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transform hover:scale-105 transition-all duration-300 shadow-lg"
-                                    >
-                                        Solar Products
-                                    </button>
+                                    
                                     <Link
                                         to="/all-products"
                                         className="inline-flex items-center px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-primary text-sm sm:text-base font-medium rounded-full text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300"
