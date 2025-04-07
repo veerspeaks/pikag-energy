@@ -4,10 +4,13 @@ import { useState } from 'react';
 function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleDropdown = () => setIsProductsOpen(!isProductsOpen);
 
   return (
     <nav className="bg-white shadow-lg">
@@ -20,41 +23,82 @@ function Navbar() {
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
                 to="/"
-                className={`${
-                  location.pathname === '/'
-                    ? 'text-gray-900 border-primary'
-                    : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                } inline-flex items-center px-1 pt-1 border-b-2`}
+                className={`${location.pathname === '/'
+                  ? 'text-gray-900 border-primary'
+                  : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
+                  } inline-flex items-center px-1 pt-1 border-b-2`}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className={`${
-                  location.pathname === '/about'
-                    ? 'text-gray-900 border-primary'
-                    : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                } inline-flex items-center px-1 pt-1 border-b-2`}
+                className={`${location.pathname === '/about'
+                  ? 'text-gray-900 border-primary'
+                  : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
+                  } inline-flex items-center px-1 pt-1 border-b-2`}
               >
                 About
               </Link>
-              <Link
-                to="/products"
-                className={`${
-                  location.pathname === '/products'
-                    ? 'text-gray-900 border-primary'
-                    : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                } inline-flex items-center px-1 pt-1 border-b-2`}
-              >
-                Products
-              </Link>
+
+
+
+              <div className={`relative ${location.pathname.includes('/products/')
+                ? 'text-gray-900 border-primary'
+                : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
+                } inline-flex items-center px-1 pt-1 border-b-2`}>
+                <div className="group">
+                  <button
+                    type="button"
+                    className="inline-flex justify-center items-center w-full px-4 py-2 group-hover:border-primary group-hover:text-gray-900"
+                  >
+                    Products
+                    <svg
+                      className="w-4 h-4 ml-2 -mr-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path fillRule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+                    </svg>
+                  </button>
+                  <div
+                    className="absolute left-0 w-40 mt-1 origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-10"
+                  >
+                    <div className="py-1">
+                      <Link
+                        to="/products/pikag"
+                        className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${location.pathname.includes('/pikag')
+                          ? 'text-gray-900 border-primary'
+                          : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
+                          } `}
+                      >PikaG</Link>
+                      <Link
+                        to="/products/laurtiz-knudsen"
+                        className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${location.pathname.includes('/laurtiz-knudsen')
+                          ? 'text-gray-900 border-primary'
+                          : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
+                          } `}
+                      >Laurtiz Knudsen</Link>
+                      <Link
+                        to="/products/omron"
+                        className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${location.pathname.includes('/omron')
+                          ? 'text-gray-900 border-primary'
+                          : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
+                          } `}
+                      >OMRON</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
               <Link
                 to="/contact"
-                className={`${
-                  location.pathname === '/contact'
-                    ? 'text-gray-900 border-primary'
-                    : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                } inline-flex items-center px-1 pt-1 border-b-2`}
+                className={`${location.pathname === '/contact'
+                  ? 'text-gray-900 border-primary'
+                  : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
+                  } inline-flex items-center px-1 pt-1 border-b-2`}
               >
                 Contact
               </Link>
@@ -86,44 +130,40 @@ function Navbar() {
         <div className="pt-2 pb-3 space-y-1">
           <Link
             to="/"
-            className={`${
-              location.pathname === '/'
-                ? 'bg-primary/10 border-primary text-primary'
-                : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
-            } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+            className={`${location.pathname === '/'
+              ? 'bg-primary/10 border-primary text-primary'
+              : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+              } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className={`${
-              location.pathname === '/about'
-                ? 'bg-primary/10 border-primary text-primary'
-                : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
-            } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+            className={`${location.pathname === '/about'
+              ? 'bg-primary/10 border-primary text-primary'
+              : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+              } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </Link>
           <Link
             to="/products"
-            className={`${
-              location.pathname === '/products'
-                ? 'bg-primary/10 border-primary text-primary'
-                : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
-            } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+            className={`${location.pathname === '/products'
+              ? 'bg-primary/10 border-primary text-primary'
+              : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+              } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
             onClick={() => setIsMenuOpen(false)}
           >
             Products
           </Link>
           <Link
             to="/contact"
-            className={`${
-              location.pathname === '/contact'
-                ? 'bg-primary/10 border-primary text-primary'
-                : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
-            } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+            className={`${location.pathname === '/contact'
+              ? 'bg-primary/10 border-primary text-primary'
+              : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+              } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
