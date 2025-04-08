@@ -13,24 +13,11 @@ function Home() {
   return (
     <>
       <Hero />
-      
-      
-      <AboutUs />
-
-      <Milestones />  
-
       <Clients />
-
-
-      {/* Stats Section */}
       <Stats />
-
-      {/* Services Section */}
-      {/* <Services /> */}
-
+      <Milestones />  
+      <Services />
       <FAQ />
-
-      {/* CTA Section */}
       <CTA />
 
       
