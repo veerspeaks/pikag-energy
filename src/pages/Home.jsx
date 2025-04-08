@@ -6,6 +6,7 @@ import CTA from '../components/HomePageComponents/CTA';
 import AboutUs from '../components/HomePageComponents/AboutUs';
 import Milestones from '../components/HomePageComponents/Milestones';
 import FAQ from '../components/FAQ';
+import Clients from '../components/Clients';
 
 
 function Home() {
@@ -16,7 +17,10 @@ function Home() {
       
       <AboutUs />
 
-      <Milestones />
+      <Milestones />  
+
+      <Clients />
+
 
       {/* Stats Section */}
       <Stats />
