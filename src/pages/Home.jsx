@@ -11,18 +11,9 @@ function Home() {
   return (
     <>
       <Hero />
-      
-      
-
-      <Milestones />
-
-      {/* Stats Section */}
       <Stats />
-
-      {/* Services Section */}
-      {/* <Services /> */}
-
-      {/* CTA Section */}
+      <Services />
+      <Milestones />
       <CTA />
 
     </>

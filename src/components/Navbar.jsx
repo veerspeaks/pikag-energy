@@ -83,7 +83,7 @@ function Navbar() {
                   </button>
                   
                   {/* Table-style mega menu */}
-                  <div className="absolute left-0 mt-2 origin-top-left bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-10 border border-gray-100">
+                  <div className="absolute left-0  origin-top-left bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-10 border border-gray-100">
                     <table className="min-w-[32rem] border-collapse">
                       <thead className="bg-gray-50">
                         <tr>
