@@ -4,6 +4,7 @@ import Stats from '../components/HomePageComponents/Stats';
 import Services from '../components/HomePageComponents/Services';
 import CTA from '../components/HomePageComponents/CTA';
 import AboutUs from '../components/HomePageComponents/AboutUs';
+import Milestones from '../components/HomePageComponents/Milestones';
 
 
 function Home() {
@@ -13,11 +14,13 @@ function Home() {
       
       
 
+      <Milestones />
+
       {/* Stats Section */}
       <Stats />
 
       {/* Services Section */}
-      <Services />
+      {/* <Services /> */}
 
       {/* CTA Section */}
       <CTA />
