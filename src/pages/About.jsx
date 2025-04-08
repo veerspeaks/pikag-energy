@@ -1,3 +1,5 @@
+import collage from '../../public/about-us.png';
+
 function About() {
   return (
     <>
@@ -66,7 +68,8 @@ function About() {
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 mix-blend-overlay"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&auto=format&fit=crop&q=80" 
+                  // src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&auto=format&fit=crop&q=80" 
+                  src={collage}
                   alt="Solar Panels" 
                   className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl"
                 />

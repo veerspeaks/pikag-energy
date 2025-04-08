@@ -68,7 +68,7 @@ function Slide1() {
           
           {/* Right section - Image */}
           <div className="w-2/3 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent z-10"></div>
+            <div className="absolute  z-10"></div>
             <img
               src="/hero-banner.png"
               alt="Mumbai Indians"
@@ -86,7 +86,7 @@ function Slide1() {
               alt="Mumbai Indians"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+            <div className="absolute "></div>
           </div>
           
           {/* Bottom - Text */}
@@ -160,7 +160,7 @@ function Slide2() {
           
           {/* Right section - Image */}
           <div className="w-2/3 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent z-10"></div>
+            <div className="absolute  z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80"
               alt="Solar Energy"
@@ -178,7 +178,7 @@ function Slide2() {
               alt="Solar Energy"
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+            <div className="absolute "></div>
           </div>
           
           {/* Bottom - Text */}
