@@ -25,13 +25,13 @@ function Contact() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-b from-white to-gray-50">
+      <div className="relative bg-light">
         <div className="max-w-7xl mx-auto py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Touch</span>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-dark sm:text-5xl md:text-6xl">
+              Get in <span className="text-primary">Touch</span>
             </h1>
-            <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-500">
+            <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-700">
               Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
           </div>
@@ -41,18 +41,18 @@ function Contact() {
       {/* Contact Section */}
       <div className="relative bg-white">
         <div className="absolute inset-0 hidden lg:block">
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
+          <div className="absolute inset-y-0 left-0 w-1/2 bg-light"></div>
         </div>
         <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
-          <div className="bg-gray-50 py-10 sm:py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+          <div className="bg-light py-10 sm:py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
             <div className="max-w-lg mx-auto">
-              <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+              <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-dark sm:text-3xl">
                 Contact Information
               </h2>
-              <p className="mt-2 sm:mt-3 text-base sm:text-lg leading-6 text-gray-500">
+              <p className="mt-2 sm:mt-3 text-base sm:text-lg leading-6 text-gray-700">
                 Reach out to us through any of these channels
               </p>
-              <dl className="mt-6 sm:mt-8 text-base text-gray-500">
+              <dl className="mt-6 sm:mt-8 text-base text-gray-700">
                 <div className="mt-4 sm:mt-6">
                   <dt className="sr-only">Address</dt>
                   <dd className="flex">
@@ -157,7 +157,7 @@ function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full sm:w-auto inline-flex justify-center py-2.5 sm:py-3 px-5 sm:px-6 border border-transparent shadow-sm text-sm sm:text-base font-medium rounded-md text-white bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transform hover:scale-105 transition-all duration-300"
+                    className="w-full sm:w-auto inline-flex justify-center py-2.5 sm:py-3 px-5 sm:px-6 border border-transparent shadow-sm text-sm sm:text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300"
                   >
                     Send Message
                   </button>

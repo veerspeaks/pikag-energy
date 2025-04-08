@@ -35,45 +35,45 @@ function Navbar() {
   );
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <img src="/logo.png" alt="PikaG Energy" className="h-12 w-auto" />
+              <img src="/logo.png" alt="PikaG Energy" className="h-10 w-auto" />
             </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <div className="hidden sm:ml-8 sm:flex sm:space-x-8">
               <Link
                 to="/"
                 className={`${location.pathname === '/'
-                  ? 'text-gray-900 border-primary'
-                  : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                  } inline-flex items-center px-1 pt-1 border-b-2`}
+                  ? 'text-primary border-primary font-semibold'
+                  : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                  } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}
               >
                 Home
               </Link>
               <Link
                 to="/about"
                 className={`${location.pathname === '/about'
-                  ? 'text-gray-900 border-primary'
-                  : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                  } inline-flex items-center px-1 pt-1 border-b-2`}
+                  ? 'text-primary border-primary font-semibold'
+                  : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                  } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}
               >
                 About
               </Link>
 
               <div className={`relative ${location.pathname.includes('/products/')
-                ? 'text-gray-900 border-primary'
-                : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                } inline-flex items-center px-1 pt-1 border-b-2`}>
+                ? 'text-primary border-primary font-semibold'
+                : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}>
                 <div className="group">
                   <button
                     type="button"
-                    className="inline-flex justify-center items-center w-full px-4 py-2 group-hover:border-primary group-hover:text-gray-900"
+                    className="inline-flex justify-center items-center w-full px-2 py-2 group-hover:border-primary group-hover:text-primary"
                   >
                     Products
                     <svg
-                      className="w-4 h-4 ml-2 -mr-1"
+                      className="w-4 h-4 ml-1"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -83,13 +83,13 @@ function Navbar() {
                   </button>
                   
                   {/* Table-style mega menu */}
-                  <div className="absolute left-0 mt-1 origin-top-left bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-10 border border-gray-100">
+                  <div className="absolute left-0 mt-2 origin-top-left bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-10 border border-gray-100">
                     <table className="min-w-[32rem] border-collapse">
                       <thead className="bg-gray-50">
                         <tr>
-                          <th className="py-2 px-3 text-sm font-semibold text-gray-900 text-left border-b border-gray-200">PikaG</th>
-                          <th className="py-2 px-3 text-sm font-semibold text-gray-900 text-left border-b border-gray-200">Laurtiz Knudsen</th>
-                          <th className="py-2 px-3 text-sm font-semibold text-gray-900 text-left border-b border-gray-200">OMRON</th>
+                          <th className="py-2 px-3 text-sm font-semibold text-dark text-left border-b border-gray-200">PikaG</th>
+                          <th className="py-2 px-3 text-sm font-semibold text-dark text-left border-b border-gray-200">Laurtiz Knudsen</th>
+                          <th className="py-2 px-3 text-sm font-semibold text-dark text-left border-b border-gray-200">OMRON</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -171,9 +171,9 @@ function Navbar() {
               <Link
                 to="/contact"
                 className={`${location.pathname === '/contact'
-                  ? 'text-gray-900 border-primary'
-                  : 'text-gray-500 border-transparent hover:border-primary hover:text-gray-900'
-                  } inline-flex items-center px-1 pt-1 border-b-2`}
+                  ? 'text-dark border-primary'
+                  : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                  } inline-flex items-center px-1 pt-1 border-b-2 font-medium`}
               >
                 Contact
               </Link>
@@ -182,7 +182,7 @@ function Navbar() {
           <div className="flex items-center sm:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-dark hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>

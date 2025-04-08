@@ -40,25 +40,25 @@ function Slide1() {
           {/* Left section - Text */}
           <div className="w-1/2 relative z-10 py-12 px-8 flex items-center">
             <div className="lg:max-w-2xl ml-auto" data-aos="fade-right">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block">The Future of</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              <h1 className="text-4xl tracking-tight font-extrabold text-dark sm:text-5xl md:text-6xl leading-[1.1]">
+                <span className="block mb-1">The Future of</span>
+                <span className="block text-primary">
                   Energy Generation
                 </span>
               </h1>
-              <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
+              <p className="mt-5 text-base text-gray-700 sm:mt-6 sm:text-lg sm:max-w-xl md:mt-6 md:text-xl leading-relaxed">
                 Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.
               </p>
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex gap-6">
                 <Link
                   to="/products"
-                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium  rounded-full text-white bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transform hover:scale-101 transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transform hover:scale-101 transition-all duration-300 shadow-md"
                 >
                   View Products
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-3 border-2 border-primary text-base font-medium rounded-full text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-3 border-2 border-primary text-base font-medium rounded-md text-primary hover:bg-primary/10 transform hover:scale-101 transition-all duration-300"
                 >
                   Contact Us
                 </Link>
@@ -68,10 +68,10 @@ function Slide1() {
           
           {/* Right section - Image */}
           <div className="w-2/3 relative">
-            <div className="absolute  z-10"></div>
+            <div className="absolute z-10"></div>
             <img
               src="/hero-banner.png"
-              alt="Mumbai Indians"
+              alt="Solar Energy Solutions"
               className="h-full w-full object-cover"
             />
           </div>
@@ -92,9 +92,9 @@ function Slide1() {
           {/* Bottom - Text */}
           <div className="px-4 py-8 relative z-10 h-[50%] flex flex-col justify-center">
             <div data-aos="fade-up">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl">
+              <h1 className="text-4xl tracking-tight font-extrabold text-dark sm:text-5xl">
                 <span className="block">The Future of</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <span className="block text-primary">
                   Energy Generation
                 </span>
               </h1>
@@ -104,13 +104,13 @@ function Slide1() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   to="/products"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transform hover:scale-101 transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transform hover:scale-101 transition-all duration-300 shadow-md"
                 >
                   View Products
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 border-2 border-primary text-base font-medium rounded-full text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 border-2 border-primary text-base font-medium rounded-md text-primary hover:bg-primary/10 transform hover:scale-101 transition-all duration-300"
                 >
                   Contact Us
                 </Link>
@@ -132,9 +132,9 @@ function Slide2() {
           {/* Left section - Text */}
           <div className="w-1/2 relative z-10 py-12 px-8 flex items-center">
             <div className="lg:max-w-2xl ml-auto" data-aos="fade-right">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl tracking-tight font-extrabold text-dark sm:text-5xl md:text-6xl">
                 <span className="block">The Future of</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <span className="block text-secondary">
                   Energy Generation
                 </span>
               </h1>
@@ -144,13 +144,13 @@ function Slide2() {
               <div className="mt-8 flex gap-4">
                 <Link
                   to="/products"
-                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary/90 transform hover:scale-101 transition-all duration-300 shadow-md"
                 >
                   View Products
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-3 border-2 border-primary text-base font-medium rounded-full text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-3 border-2 border-secondary text-base font-medium rounded-md text-secondary hover:bg-secondary/10 transform hover:scale-101 transition-all duration-300"
                 >
                   Contact Us
                 </Link>
@@ -184,9 +184,9 @@ function Slide2() {
           {/* Bottom - Text */}
           <div className="px-4 py-8 relative z-10 h-[50%] flex flex-col justify-center">
             <div data-aos="fade-up">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl">
+              <h1 className="text-4xl tracking-tight font-extrabold text-dark sm:text-5xl">
                 <span className="block">The Future of</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <span className="block text-secondary">
                   Energy Generation
                 </span>
               </h1>
@@ -196,13 +196,13 @@ function Slide2() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   to="/products"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary/90 transform hover:scale-101 transition-all duration-300 shadow-md"
                 >
                   View Products
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 border-2 border-primary text-base font-medium rounded-full text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 border-2 border-secondary text-base font-medium rounded-md text-secondary hover:bg-secondary/10 transform hover:scale-101 transition-all duration-300"
                 >
                   Contact Us
                 </Link>

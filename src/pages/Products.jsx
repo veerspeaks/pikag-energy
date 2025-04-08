@@ -50,12 +50,12 @@ function Products({productsMap, productTypes, pageName}) {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Company Hero Banner */}
-      <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-12 sm:py-16">
+      <div className="bg-primary/5 py-14 sm:py-18 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 text-center">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary capitalize">{pageName}</span> Products
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-dark text-center leading-tight">
+            <span className="text-primary capitalize">{pageName}</span> Products
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600 text-center">
+          <p className="mt-5 max-w-2xl mx-auto text-xl text-gray-700 text-center">
             Explore our industry-leading {pageName} energy solutions
           </p>
         </div>
@@ -63,14 +63,14 @@ function Products({productsMap, productTypes, pageName}) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Product Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 sm:space-x-4 mb-8 sm:mb-12">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 sm:mb-14">
           {productTypes.map((type) => (
             <button
               key={`${pageName}-${type}`}
               onClick={() => handleTabChange(type)}
-              className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium rounded-full transition-all duration-300 ${activeTab === type
-                ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+              className={`px-5 sm:px-6 py-2.5 sm:py-3 text-base font-medium rounded-md transition-all duration-300 ${activeTab === type
+                ? 'bg-primary text-white shadow-md'
+                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
             >
               {type.charAt(0).toUpperCase() + type.slice(1)} Products
@@ -79,16 +79,16 @@ function Products({productsMap, productTypes, pageName}) {
         </div>
 
         {/* Product Filter & Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-0 capitalize">
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-dark mb-4 sm:mb-0 capitalize leading-tight">
             {activeTab} Products
           </h2>
           
           <div className="flex items-center">
-            <label htmlFor="sort" className="mr-2 text-sm text-gray-600">Sort by:</label>
+            <label htmlFor="sort" className="mr-3 text-base text-gray-700">Sort by:</label>
             <select 
               id="sort" 
-              className="bg-white border border-gray-300 text-gray-700 py-2 px-3 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="bg-white border border-gray-200 text-gray-700 py-2.5 px-4 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary"
               value={sortOrder}
               onChange={(e) => setSortOrder(e.target.value)}
             >
@@ -106,9 +106,9 @@ function Products({productsMap, productTypes, pageName}) {
             {productTypes.map((category) => (
               category !== 'all' && (
                 <div key={category} className="mb-16">
-                  <div className="flex items-center mb-6">
-                    <h2 className="text-2xl font-bold text-gray-900 capitalize">{category} Products</h2>
-                    <div className="h-0.5 flex-grow ml-6 bg-gradient-to-r from-primary/50 to-transparent"></div>
+                  <div className="flex items-center mb-8">
+                    <h2 className="text-2xl font-bold text-dark capitalize leading-tight">{category} Products</h2>
+                    <div className="h-0.5 flex-grow ml-6 bg-primary/20"></div>
                   </div>
                   
                   {/* Products Grid for each category */}
@@ -135,8 +135,8 @@ function Products({productsMap, productTypes, pageName}) {
                           </div>
                         </div>
                         <div className="p-4 sm:p-5 flex-grow flex flex-col">
-                          <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-1">{product.name}</h3>
-                          <p className="text-sm text-gray-600 line-clamp-3 flex-grow">{product.description}</p>
+                          <h3 className="text-lg font-bold text-dark mb-2 line-clamp-1">{product.name}</h3>
+                          <p className="text-base text-gray-700 line-clamp-3 flex-grow leading-relaxed">{product.description}</p>
                         </div>
                       </div>
                     ))}
@@ -167,8 +167,8 @@ function Products({productsMap, productTypes, pageName}) {
                     </div>
                   </div>
                   <div className="p-4 sm:p-5 flex-grow flex flex-col">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-1">{product.name}</h3>
-                    <p className="text-sm text-gray-600 line-clamp-3 flex-grow">{product.description}</p>
+                    <h3 className="text-lg font-bold text-dark mb-2 line-clamp-1">{product.name}</h3>
+                    <p className="text-base text-gray-700 line-clamp-3 flex-grow leading-relaxed">{product.description}</p>
                   </div>
                 </div>
               ))}
@@ -178,7 +178,7 @@ function Products({productsMap, productTypes, pageName}) {
         
         {/* Featured Product Showcase - only display for specific categories, not "all" */}
         {activeTab !== 'all' && currentProducts.length > 0 && (
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12 border border-gray-100" data-aos="fade-up">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12 border border-gray-200" data-aos="fade-up">
             <div className="lg:flex">
               <div className="lg:w-1/2">
                 <img 
@@ -188,13 +188,13 @@ function Products({productsMap, productTypes, pageName}) {
                 />
               </div>
               <div className="lg:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
-                <div className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-4 capitalize">
+                <div className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-md mb-4 capitalize">
                   Featured {activeTab} Product
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">{currentProducts[0].name}</h3>
-                <p className="text-base text-gray-600 mb-6">{currentProducts[0].description}</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-dark mb-2 sm:mb-4">{currentProducts[0].name}</h3>
+                <p className="text-base text-gray-700 mb-6 leading-relaxed">{currentProducts[0].description}</p>
                 <div className="mt-auto">
-                  <button className="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white text-sm sm:text-base rounded-md hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-md flex items-center">
+                  <button className="px-6 py-3 bg-primary text-white text-sm sm:text-base rounded-md hover:bg-primary/90 transition-all duration-300 shadow-md flex items-center">
                     See Product Details
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
