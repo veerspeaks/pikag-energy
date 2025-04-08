@@ -5,6 +5,7 @@ import Services from '../components/HomePageComponents/Services';
 import CTA from '../components/HomePageComponents/CTA';
 import AboutUs from '../components/HomePageComponents/AboutUs';
 import Milestones from '../components/HomePageComponents/Milestones';
+import FAQ from '../components/FAQ';
 
 
 function Home() {
@@ -14,7 +15,10 @@ function Home() {
       <Stats />
       <Services />
       <Milestones />
+      <FAQ />
       <CTA />
+
+      
 
     </>
   );
