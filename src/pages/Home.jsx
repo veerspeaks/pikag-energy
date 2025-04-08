@@ -12,7 +12,6 @@ function Home() {
       <Hero />
       
       
-      <AboutUs />
 
       {/* Stats Section */}
       <Stats />

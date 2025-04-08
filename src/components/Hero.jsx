@@ -67,7 +67,7 @@ function Slide1() {
           </div>
           
           {/* Right section - Image */}
-          <div className="w-2/3 relative">
+          <div className="w-1/2 relative">
             <div className="absolute z-10"></div>
             <img
               src="/hero-banner.png"
@@ -159,7 +159,7 @@ function Slide2() {
           </div>
           
           {/* Right section - Image */}
-          <div className="w-2/3 relative">
+          <div className="w-1/2 relative">
             <div className="absolute  z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80"

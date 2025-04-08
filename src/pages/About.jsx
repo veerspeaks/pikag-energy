@@ -1,5 +1,5 @@
 import collage from '../../public/about-us.png';
-
+import AboutUs from '../components/HomePageComponents/AboutUs';
 function About() {
   return (
     <>
@@ -44,35 +44,67 @@ function About() {
         </div>
       </div>
 
-      {/* Company Overview */}
-      <div className="py-12 sm:py-16 md:py-24 bg-white">
+      {/* Company Overview / Our Story */}
+      {/* <div className="py-16 sm:py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative" data-aos="fade-right">
+            <div className="relative order-2 lg:order-1" data-aos="fade-right" data-aos-duration="800">
               <div className="relative">
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-dark mb-4 sm:mb-8">Our Story</h2>
-                <div className="prose prose-base sm:prose-lg text-gray-700">
-                  <p className="mb-4 sm:mb-6 text-base">
+                <div className="inline-block mb-4">
+                  <div className="flex items-center">
+                    <div className="w-10 h-1 bg-primary rounded-full"></div>
+                    <span className="ml-4 text-sm uppercase tracking-wider text-primary font-semibold">Est. 2018</span>
+                  </div>
+                </div>
+                <h2 className="text-3xl sm:text-5xl font-extrabold text-dark mb-6 sm:mb-8 leading-tight">
+                  Our <span className="text-primary">Story</span>
+                </h2>
+                <div className="prose prose-lg text-gray-700 max-w-none">
+                  <p className="mb-6 text-base sm:text-lg leading-relaxed">
                     PIKAG ENERGY PRIVATE LIMITED was incorporated on 26/03/2018 under the companies Act, 2013. As a start-up organization, we are committed to endless business ethics and look to develop lasting associations with our clients, vendors, associates, and everyone we do business with.
                   </p>
-                  <p className="text-base">
+                  <p className="text-base sm:text-lg leading-relaxed mb-8">
                     We place special emphasis on the "on-time and on-budget" delivery of solar power plants and LED lights, optimized to deliver superior output. With our subsidiaries, we have designed and built a significant volume of systems since our founding.
                   </p>
+                  <div className="flex flex-col sm:flex-row items-start gap-4 mt-6">
+                    <div className="bg-light p-4 rounded-lg border-l-4 border-primary">
+                      <h4 className="font-bold text-dark mb-1">Our Mission</h4>
+                      <p className="text-sm text-gray-700">To provide sustainable energy solutions that power communities while protecting our planet.</p>
+                    </div>
+                    <div className="bg-light p-4 rounded-lg border-l-4 border-primary">
+                      <h4 className="font-bold text-dark mb-1">Our Vision</h4>
+                      <p className="text-sm text-gray-700">To lead the transition to a clean energy future through innovation and excellence.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="mt-10 lg:mt-0 relative" data-aos="fade-left">
-              <div className="relative rounded-lg overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
+            <div className="mb-10 lg:mb-0 order-1 lg:order-2 relative" data-aos="fade-left" data-aos-duration="800">
+              <div className="relative rounded-xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-primary/40 to-transparent opacity-60 mix-blend-overlay"></div>
                 <img 
                   src={collage}
-                  alt="Solar Panels" 
-                  className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-lg shadow-md"
+                  alt="PikaG Energy Story" 
+                  className="w-full h-[300px] sm:h-[450px] md:h-[550px] object-cover"
                 />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                  <div className="flex space-x-4">
+                    <div className="text-white">
+                      <div className="text-2xl sm:text-3xl font-bold">5+</div>
+                      <div className="text-xs sm:text-sm">Years of Excellence</div>
+                    </div>
+                    <div className="text-white">
+                      <div className="text-2xl sm:text-3xl font-bold">100+</div>
+                      <div className="text-xs sm:text-sm">Projects Completed</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <AboutUs />
 
       {/* Certifications */}
       <div className="py-12 sm:py-16 md:py-24 bg-light">
