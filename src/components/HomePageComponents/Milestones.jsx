@@ -36,70 +36,30 @@ const Milestones = () => {
   };
 
   return (
-    <div
-      className="flex flex-col items-center justify-center min-h-screen bg-cover bg-center transition-all duration-700"
-      style={{ backgroundImage: `url(${selectedChapter.image})` }}
-    >
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={selectedChapter.title}
-          className="bg-white p-8 rounded-lg shadow-lg text-center max-w-xl w-full"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.5 }}
-        >
-          <motion.h1
-            className="text-2xl font-bold mb-2"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            {selectedChapter.title}
-          </motion.h1>
-          <motion.p
-            className="mb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            {selectedChapter.description}
-          </motion.p>
-          <motion.a
-            href={selectedChapter.link}
-            className="inline-block mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            Learn More
-          </motion.a>
-        </motion.div>
-      </AnimatePresence>
+    <div className="w-full md:w-[80%] mx-auto h-screen">
+      <div style={{backgroundImage: `url(${selectedChapter.image})`}} className="w-full bg-cover bg-center rounded-lg shadow-lg flex flex-col items-start justify-start h-[70%] p-4 bg-blend-overlay bg-gray-800 bg-opacity-70 text-white">
+          <h2 className="text-5xl font-bold">{selectedChapter.title}</h2>
+          <p className="mt-2">{selectedChapter.description}</p>
+          <a href={selectedChapter.link} className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">Learn More</a>
+      </div>
 
-      <motion.div
-        className="flex mt-6 flex-wrap justify-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mt-4'>
         {CHAPTERS.map((chapter, index) => (
-          <motion.button
+          <motion.div
             key={index}
+            className={`p-4 rounded-lg shadow-lg cursor-pointer ${selectedChapter.title === chapter.title ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'} hover:text-secondary hover:bg-transparent transition duration-300`}
             onClick={() => handleTabChange(chapter)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`px-4 py-2 rounded-lg m-2 text-sm font-medium ${
-              selectedChapter.title === chapter.title
-                ? 'bg-white text-blue-600 border border-blue-600'
-                : 'bg-blue-600 text-white'
-            }`}
+            // whileHover={{ scale: 1.05 }}
           >
-            {chapter.title}
-          </motion.button>
+            <h3 className="text-md font-semibold">{`Chapter ${index+1}`}</h3>
+            <p className="text-sm font-normal">{chapter.title}</p>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
+
     </div>
+
+
   );
 };
 
