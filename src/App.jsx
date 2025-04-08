@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
-import AllProducts from './pages/AllProducts';
 import Footer from "./components/Footer";
 
 
@@ -30,11 +29,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/laurtiz-knudsen" element={<Products productsMap={LK_PRODUCTS_MAP} productTypes={LK_PRODUCT_TYPES} pageName="laurtiz-knudsen" />} />
-        <Route path="/all-products/laurtiz-knudsen" element={<AllProducts productsMap={LK_PRODUCTS_MAP} productTypes={LK_PRODUCT_TYPES} pageName="laurtiz-knudsen" />} />
         <Route path="/products/pikag" element={<Products productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
         <Route path="/products/omron" element={<Products productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />
-        <Route path="/all-products/pikag" element={<AllProducts productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
-        <Route path="/all-products/omron" element={<AllProducts productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />
       </Routes>
       <Footer />
     </div>

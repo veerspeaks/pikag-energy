@@ -17,18 +17,16 @@ const PIKAG_PRODUCTS_MAP = {
 const PIKAG_PRODUCT_TYPES = Object.keys(PIKAG_PRODUCTS_MAP);
 
 //For products page of OMRON
-
 const OMRON_PRODUCTS_MAP = {
+  all: OMRON_ROBOTICS_PRODUCTS, // Using robotics as all products since it's the only category
   robotics: OMRON_ROBOTICS_PRODUCTS,
 };
 
 const OMRON_PRODUCT_TYPES = Object.keys(OMRON_PRODUCTS_MAP);
 
-
-
 //For products page of Laurtiz Knudsen
-
 const LK_PRODUCTS_MAP = {
+  all: LK_ALL_PRODUCTS,
   Drives: LK_AC_DRIVE_PRODUCTS,
   SoftStarters: LK_SOFT_STARTERS_PRODUCTS,
   HMIs: LK_HMI_PRODUCTS,
