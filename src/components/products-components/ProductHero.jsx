@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const ProductHero = () => {
+const ProductHero = ({pageName}) => {
     const navigate = useNavigate();
 
     const handleSolarClick = () => {
-        navigate('/products', { state: { selectedTab: 'solar' } });
+        navigate(`/products/${pageName}`, { state: { selectedTab: 'solar' } });
     };
 
     return (
@@ -30,7 +30,7 @@ const ProductHero = () => {
                                 <div className="mt-6 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                                     
                                     <Link
-                                        to="/all-products"
+                                        to={`/all-products/${pageName}`}
                                         className="inline-flex items-center px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-primary text-sm sm:text-base font-medium rounded-full text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300"
                                     >
                                         View All
