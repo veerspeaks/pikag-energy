@@ -177,6 +177,16 @@ function Navbar() {
               >
                 Contact
               </Link>
+
+              <Link
+                to="/omron-solutions"
+                className={`${location.pathname === '/contact'
+                  ? 'text-dark border-primary'
+                  : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                  } inline-flex items-center px-1 pt-1 border-b-2 font-medium`}
+              >
+                Omron Solutions
+              </Link>
             </div>
           </div>
           <div className="flex items-center sm:hidden">
@@ -345,6 +355,17 @@ function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
+          </Link>
+
+          <Link
+            to="/omron-solutions"
+            className={`${location.pathname === '/contact'
+              ? 'bg-primary/10 border-primary text-primary'
+              : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+              } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+            // onClick={() => setIsMenuOpen(false)}
+          >
+            Omron Solutions
           </Link>
         </div>
       </div>
