@@ -16,6 +16,30 @@ import vfd from "../../../public/omron-solutions/material-handling/vfd.png";
 
 
 
+import automobile from "../../../public/omron-solutions/automobile/automobile.png";
+import colorSensors from "../../../public/omron-solutions/automobile/color-sensors.png";
+import industrialNetwork from "../../../public/omron-solutions/automobile/industrial-network.png";
+import machineAutomationController from "../../../public/omron-solutions/automobile/machine-automation-controller.png";
+import photoelectricSensor from "../../../public/omron-solutions/automobile/photoelectric-sensor.png";
+// import proximitySensor from "../../../public/omron-solutions/automobile/proximity-sensor.png";
+import safetyDoorSwitch from "../../../public/omron-solutions/automobile/safety-door-switch.png";
+import safetyLightCurtain from "../../../public/omron-solutions/automobile/safety-light-curtain.png";
+import visionSensors from "../../../public/omron-solutions/automobile/vision-sensors.png";
+
+import monitoringController from "../../../public/omron-solutions/panels/monitoring-controller.png";
+import inverters from "../../../public/omron-solutions/panels/inverters.png";
+import panelHmi from "../../../public/omron-solutions/panels/panel-hmi.png";
+import panels from "../../../public/omron-solutions/panels/panels.png";
+import programmableControllers from "../../../public/omron-solutions/panels/programmable-controllers.png";
+import relays from "../../../public/omron-solutions/panels/relays.png";
+import solidStateRelays from "../../../public/omron-solutions/panels/solid-state-relays.png";
+import switches from "../../../public/omron-solutions/panels/switches.png";
+import switchingPowerSupplies from "../../../public/omron-solutions/panels/switching-power-supplies.png";
+import temperatureControllers from "../../../public/omron-solutions/panels/temperature-controllers.png";
+import timerCounter from "../../../public/omron-solutions/panels/timer-counter.png";
+
+
+
 const products = [
   {
     title: "Complete Solution for Material Handling",
@@ -34,21 +58,33 @@ const products = [
   {
     title: "Complete Solution for Automobile",
     description: "Omron's automobile solution includes vision sensors, proximity sensors, and safety light curtains to automate manufacturing lines.",
-    largeImage: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19.jpeg",
+    largeImage: automobile,  // This is the large image for the automobile section
     smallImages: [
-      { image: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19.jpeg", name: "Vision Sensors" },
-      { image: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19 (1).jpeg", name: "Safety Light Curtain" },
-      { image: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19 (2).jpeg", name: "Proximity Sensor" },
+      { image: visionSensors, name: "Vision Sensors" },
+      { image: safetyLightCurtain, name: "Safety Light Curtain" },
+      { image: proximitySensor, name: "Proximity Sensor" },
+      { image: industrialNetwork, name: "Industrial Network" },
+      { image: machineAutomationController, name: "Machine Automation Controller" },
+      { image: photoelectricSensor, name: "Photoelectric Sensor" },
+      { image: safetyDoorSwitch, name: "Safety Door Switch" },
+      { image: colorSensors, name: "Color Sensors" },
     ]
   },
   {
     title: "Complete Solution for Panels",
     description: "Omron’s panel solutions offer temperature controllers, human-machine interfaces, and more to provide complete automation solutions.",
-    largeImage: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19 (1).jpeg",
+    largeImage: panels, // This is the large image for the panels section
     smallImages: [
-      { image: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19.jpeg", name: "Temperature Controller" },
-      { image: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19 (1).jpeg", name: "Human Interface" },
-      { image: "/mnt/data/WhatsApp Image 2025-04-10 at 12.47.19 (2).jpeg", name: "Switching Power Supplies" },
+      { image: temperatureControllers, name: "Temperature Controller" },
+      { image: panelHmi, name: "Human Interface" },
+      { image: switchingPowerSupplies, name: "Switching Power Supplies" },
+      { image: programmableControllers, name: "Programmable Controllers" },
+      { image: relays, name: "Relays" },
+      { image: solidStateRelays, name: "Solid State Relays" },
+      { image: switches, name: "Switches" },
+      { image: monitoringController, name: "Monitoring Controller" },
+      { image: inverters, name: "Inverters" },
+      { image: timerCounter, name: "Timer Counter" }
     ]
   },
 ];
