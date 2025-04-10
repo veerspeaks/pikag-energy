@@ -14,9 +14,9 @@ function Home() {
     <>
       <Hero />
       <Clients />
-      <Stats />
-      <Milestones />  
+      <Stats /> 
       <Services />
+      <Milestones /> 
       <FAQ />
       <CTA />
 
