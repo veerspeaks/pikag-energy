@@ -27,13 +27,13 @@ const Footer = () => {
                     <div
                         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 col-span-1 md:col-span-7 lg:col-span-6 gap-y-10 sm:gap-y-12 sm:gap-x-8 md:gap-x-8 lg:gap-x-10 mt-8 md:mt-0 text-center sm:text-left">
                         <div>
-                            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary mb-5 sm:mb-6">Get in Touch</h3>
-                            <ul className="space-y-3">
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary mb-5 sm:mb-6">{/*Get in Touch */}</h3>
+                            {/* <ul className="space-y-3">
                                 <li><Link to="/contact" className="text-base hover:text-primary transition-colors">Start a Project</Link></li>
                                 <li><Link to="/contact" className="text-base hover:text-primary transition-colors">Join the Team</Link></li>
                                 <li><Link to="/contact" className="text-base hover:text-primary transition-colors">Press & Media</Link></li>
                                 <li><Link to="/contact" className="text-base hover:text-primary transition-colors">Drop Us a Note</Link></li>
-                            </ul>
+                            </ul> */}
                         </div>
                         <div>
                             <h3 className="text-sm font-semibold uppercase tracking-wide text-primary mb-5 sm:mb-6">See More</h3>

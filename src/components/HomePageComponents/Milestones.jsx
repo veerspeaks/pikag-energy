@@ -309,7 +309,7 @@ const Milestones = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-6" data-aos="fade-up" data-aos-delay="200">
+        <div className="md:grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-6 hidden" data-aos="fade-up" data-aos-delay="200">
           {CHAPTERS.map((chapter, index) => (
             <motion.div
               key={index}
