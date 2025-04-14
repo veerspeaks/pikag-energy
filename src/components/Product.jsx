@@ -13,6 +13,7 @@ const Product = ({id, product}) => {
                     <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 line-clamp-1">{product.name}</h3>
                     <p className="text-xs sm:text-sm md:text-base text-gray-600 line-clamp-2 sm:line-clamp-3">{product.description}</p>
                 </div>
+                
             </div>
         </div>
     )

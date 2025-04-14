@@ -201,7 +201,7 @@ const Milestones = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 }
               }}
-              className="absolute w-full h-full"
+              className="absolute w-full h-full "
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={1}
@@ -268,7 +268,7 @@ const Milestones = () => {
 
           {/* Side navigation arrows */}
           <button 
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-2 rounded-full backdrop-blur-sm z-10 transition-colors duration-200"
+            className="absolute hidden md:block left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-2 rounded-full backdrop-blur-sm z-10 transition-colors duration-200"
             onClick={() => {
               const newIndex = selectedIndex === 0 ? CHAPTERS.length - 1 : selectedIndex - 1;
               setPage([newIndex, -1]);
@@ -280,7 +280,7 @@ const Milestones = () => {
             </svg>
           </button>
           <button 
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-2 rounded-full backdrop-blur-sm z-10 transition-colors duration-200"
+            className="absolute hidden md:block right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-2 rounded-full backdrop-blur-sm z-10 transition-colors duration-200"
             onClick={() => {
               const newIndex = (selectedIndex + 1) % CHAPTERS.length;
               setPage([newIndex, 1]);
@@ -309,11 +309,11 @@ const Milestones = () => {
           </div>
         </div>
 
-        <div className="md:grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-6 hidden" data-aos="fade-up" data-aos-delay="200">
+        <div className="grid grid-cols-4 md:grid-cols-4 gap-4 sm:gap-6 mt-6" data-aos="fade-up" data-aos-delay="200">
           {CHAPTERS.map((chapter, index) => (
             <motion.div
               key={index}
-              className={`p-5 rounded-lg shadow-md cursor-pointer transition-all duration-300 ${
+              className={`md:p-5 rounded-lg shadow-md cursor-pointer transition-all duration-300 ${
                 selectedIndex === index 
                   ? 'bg-primary text-white shadow-lg' 
                   : 'bg-light text-dark hover:bg-gray-100'
@@ -321,17 +321,17 @@ const Milestones = () => {
               onClick={() => handleTabChange(index)}
               whileHover={{ scale: 1.03 }}
             >
-              <div className="flex items-center mb-2">
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center mr-3 ${
+              <div className={`flex items-center justify-center md:justify-start my-2 md:my-0`}>
+                <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center md:mr-3 ${
                   selectedIndex === index 
                     ? 'bg-white text-primary' 
                     : 'bg-primary text-white'
                 }`}>
                   <span className="font-bold">{index + 1}</span>
                 </div>
-                <h3 className="text-lg font-semibold">Chapter {index + 1}</h3>
+                <h3 className="text-lg font-semibold hidden md:block">Chapter {index + 1}</h3>
               </div>
-              <p className={`text-sm ${
+              <p className={`text-sm hidden md:block md:mt-2 ${
                 selectedIndex === index 
                   ? 'text-white/90' 
                   : 'text-gray-700'

@@ -50,14 +50,14 @@ const Clients = () => {
                     Our <span className='text-primary'>Clients</span>
                 </motion.h2>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                <div className="grid grid-cols-5 gap-1 md:gap-4">
                     {clients.map(client => (
                         <motion.div
                             key={client.id}
-                            className="flex justify-center items-center p-4 hover:scale-105 transition-transform duration-300"
+                            className="flex justify-center items-center p-1 md:p-4 hover:scale-105 transition-transform duration-300"
                             variants={itemVariants}
                         >
-                            <img src={client.src} alt={client.alt} className="max-h-50" />
+                            <img src={client.src} alt={client.alt} className="max-h-10 md:max-h-[100px]" />
                         </motion.div>
                     ))}
                 </div>
