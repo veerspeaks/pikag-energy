@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 import Footer from "./components/Footer";
 import OmronSolutionsPage from './pages/OmronSolutionsPage';
 
@@ -14,6 +15,7 @@ import OmronSolutionsPage from './pages/OmronSolutionsPage';
 import { PIKAG_PRODUCTS_MAP, PIKAG_PRODUCT_TYPES } from './constants/product_types';
 import { OMRON_PRODUCTS_MAP, OMRON_PRODUCT_TYPES } from './constants/product_types';
 import { LK_PRODUCTS_MAP, LK_PRODUCT_TYPES } from './constants/product_types';
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -33,6 +35,9 @@ function App() {
         <Route path="/products/pikag" element={<Products productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
         <Route path="/products/omron" element={<Products productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />
         <Route path="/omron-solutions" element={<OmronSolutionsPage />} />
+        
+        {/* New offerings routes */}
+        <Route path="/offerings/:categoryId/:subcategoryId/:productId" element={<ProductDetail />} />
       </Routes>
       <Footer />
     </div>
