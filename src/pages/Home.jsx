@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import Stats from '../components/HomePageComponents/Stats';
 import Services from '../components/HomePageComponents/Services';
 import CTA from '../components/HomePageComponents/CTA';
-import AboutUs from '../components/HomePageComponents/AboutUs';
+import AboutUsHome from '../components/HomePageComponents/AboutUsHome';
 import Milestones from '../components/HomePageComponents/Milestones';
 import FAQ from '../components/FAQ';
 import Clients from '../components/Clients';
@@ -13,10 +13,12 @@ function Home() {
   return (
     <>
       <Hero />
+      <AboutUsHome /> 
+      <Services />
       <Clients />
       <Stats /> 
       <Services />
-      <Milestones /> 
+      {/* <Milestones />  */}
       <FAQ />
       <CTA />
 

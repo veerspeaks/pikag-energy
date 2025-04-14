@@ -1,5 +1,5 @@
 import collage from '../../public/about-us.png';
-import AboutUs from '../components/HomePageComponents/AboutUs';
+import AboutUs from '../components/AboutUs';
 function About() {
   return (
     <>
