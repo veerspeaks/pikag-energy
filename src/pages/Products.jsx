@@ -128,7 +128,7 @@ function Products({productsMap, productTypes, pageName}) {
                           <img
                             src={product.image}
                             alt={product.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                           />
                           <div className="absolute top-0 right-0 bg-primary/80 text-white text-xs font-medium px-2 py-1 m-2 rounded-md capitalize">
                             {category}
@@ -160,7 +160,7 @@ function Products({productsMap, productTypes, pageName}) {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute top-0 right-0 bg-primary/80 text-white text-xs font-medium px-2 py-1 m-2 rounded-md capitalize">
                       {activeTab}
@@ -184,7 +184,7 @@ function Products({productsMap, productTypes, pageName}) {
                 <img 
                   src={currentProducts[0].image} 
                   alt={currentProducts[0].name}
-                  className="w-full h-80 sm:h-96 lg:h-full object-cover" 
+                  className="w-full h-80 sm:h-96 lg:h-full object-contain" 
                 />
               </div>
               <div className="lg:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
