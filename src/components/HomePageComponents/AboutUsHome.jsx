@@ -26,35 +26,6 @@ const AboutUsHome = () => {
                         We place special emphasis on the "on-time and on-budget" delivery of solar power plants and LED lights, optimized to deliver superior output. With our subsidiaries, we have designed and built a significant volume of systems since our founding.
                     </p>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10" data-aos="fade-up" data-aos-delay="200">
-                    <div className="bg-light p-6 rounded-lg border-l-4 border-primary">
-                        <h4 className="font-bold text-dark text-lg mb-2">Our Mission</h4>
-                        <p className="text-sm sm:text-base text-gray-700">To provide sustainable energy solutions that power communities while protecting our planet.</p>
-                    </div>
-                    <div className="bg-light p-6 rounded-lg border-l-4 border-primary">
-                        <h4 className="font-bold text-dark text-lg mb-2">Our Vision</h4>
-                        <p className="text-sm sm:text-base text-gray-700">To lead the transition to a clean energy future through innovation and excellence.</p>
-                    </div>
-                </div>
-
-                <div className="flex justify-center" data-aos="fade-up" data-aos-delay="300">
-                    <Link 
-                        to="/about" 
-                        className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg font-medium transition-colors duration-300 mt-2 group"
-                    >
-                        Learn More About Us
-                        <svg 
-                            className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            fill="none" 
-                            viewBox="0 0 24 24" 
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </Link>
-                </div>
             </div>
         </div>
     )
