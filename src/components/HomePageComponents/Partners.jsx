@@ -6,7 +6,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 const slidesData = [
   {
-    title: "Omron Automation",
+    title: "​Lauritz Knudsen Electrical & Automation",
     content: "Provides innovative automation solutions to enhance safety and productivity across industries. Operating globally with over 80 years of expertise in automation and control systems.",
   },
   {
