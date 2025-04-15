@@ -2,8 +2,14 @@ import React from 'react'
 
 const Services = () => {
     const services = [
+        
         {
-            title: "Industrial Machinery",
+            title: "Motor Drives & Controls",
+            description: "Advanced drive systems from top manufacturers that optimize performance, energy efficiency, and precision control.",
+            image: "/products/ik/ac-drive/xd3000.png",
+        },
+        {
+            title: "Industrial Solution",
             description: "High-performance industrial equipment from leading manufacturers, optimized for efficiency and reliability. Your Trust, Our Responsibility.",
             image: "/services/industrialmachinery.jpg",
         },
@@ -13,14 +19,9 @@ const Services = () => {
             image: "/services/robotics.jpg",
         },
         {
-            title: "Solar Solutions",
+            title: "Solar Power",
             description: "Industry-leading solar panel systems that deliver sustainable energy and significant cost savings for your business.",
             image: "/services/solarsolution.jpg",
-        },
-        {
-            title: "Motor Drives & Controls",
-            description: "Advanced drive systems from top manufacturers that optimize performance, energy efficiency, and precision control.",
-            image: "/products/ik/ac-drive/xd3000.png",
         },
         {
             title: "IoT & Smart Devices",
