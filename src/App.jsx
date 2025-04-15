@@ -6,11 +6,12 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Credentials from './pages/Credentials';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Footer from "./components/Footer";
 import OmronSolutionsPage from './pages/OmronSolutionsPage';
-
+import EnquiryButton from './components/EnquiryButton';
 
 import { PIKAG_PRODUCTS_MAP, PIKAG_PRODUCT_TYPES } from './constants/product_types';
 import { OMRON_PRODUCTS_MAP, OMRON_PRODUCT_TYPES } from './constants/product_types';
@@ -27,10 +28,12 @@ function App() {
   return (
     <div className="font-poppins">
       <Navbar />
+      <EnquiryButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/credentials" element={<Credentials />} />
         <Route path="/products/laurtiz-knudsen" element={<Products productsMap={LK_PRODUCTS_MAP} productTypes={LK_PRODUCT_TYPES} pageName="laurtiz-knudsen" />} />
         <Route path="/products/pikag" element={<Products productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
         <Route path="/products/omron" element={<Products productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />

@@ -107,7 +107,7 @@ function About() {
       <AboutUs />
 
       {/* Certifications */}
-      <div className="py-12 sm:py-16 md:py-24 bg-light">
+      {/* <div className="py-12 sm:py-16 md:py-24 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-16" data-aos="fade-up">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-dark mb-3 sm:mb-4">Certifications & Registrations</h2>
@@ -147,7 +147,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

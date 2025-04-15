@@ -79,6 +79,15 @@ function Navbar() {
                 >
                   Contact
                 </Link>
+                <Link
+                  to="/credentials"
+                  className={`${location.pathname === '/credentials'
+                    ? 'text-primary border-primary font-semibold'
+                    : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}
+                >
+                  Credentials
+                </Link>
               </div>
             </div>
             <div className="flex items-center sm:hidden">
@@ -125,7 +134,7 @@ function Navbar() {
             >
               About
             </Link>
-            
+
             {/* Mobile Offerings Button */}
             <div className="border-l-4 border-transparent">
               <button
@@ -153,6 +162,16 @@ function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              to="/credentials"
+              className={`${location.pathname === '/credentials'
+                ? 'bg-primary/10 border-primary text-primary'
+                : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+                } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Credentials
             </Link>
           </div>
         </div>
