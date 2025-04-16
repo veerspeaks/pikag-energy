@@ -25,8 +25,8 @@ function Navbar() {
       <nav className="bg-white shadow-md border-b border-gray-100 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 ">
-            <div className="flex-shrink-0 flex items-center">
-              <img src="/logo.png" alt="PikaG Energy" className="h-10 w-auto" />
+            <div className="flex-shrink-0 flex items-center size-30">
+              <img src="/logo.png" alt="PikaG Energy" className="h-full w-auto" />
             </div>
             <div className="hidden sm:flex sm:flex-1 sm:justify-center">
               <div className="flex space-x-8">
@@ -93,14 +93,12 @@ function Navbar() {
             </div>
 
             {/* Right-side info (desktop only) */}
-            <div className="hidden sm:flex items-center space-x-2 text-gray-600 absolute top-[5px] right-[5px] text-[11px] font-bold">
+            <div className="hidden sm:flex items-center space-x-2 text-gray-600 text-[11px] font-bold">
               <span className="hover:text-primary cursor-pointer">English</span>
               <span>|</span>
               <Flag code="IN" style={{ width: 20, height: 14 }} alt="Indian Flag" />
               <span>|</span>
-              <a href="tel:+911234567890" className="hover:text-primary">+91 12345 67890</a>
-              <span>|</span>
-              <a href="mailto:info@example.com" className="hover:text-primary">info@example.com</a>
+              <a href="tel:+911234567890" className="hover:text-primary">+91 9755021473</a>
             </div>
 
             <div className="flex items-center sm:hidden">
