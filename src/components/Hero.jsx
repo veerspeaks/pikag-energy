@@ -12,8 +12,8 @@ const slides = [
     buttonColor: 'primary',
     description:
       'Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.',
-    desktopImage: '/hero/hero-banner.png',
-    mobileImage: '/hero/hero-banner2.jpg',
+    desktopImage: '/hero/industrial-automation.jpeg',
+    desktopImage: '/hero/industrial-automation.jpeg',
     partnerLogo: '/partners/lk.png',
   },
   {
@@ -23,7 +23,7 @@ const slides = [
     buttonColor: 'secondary',
     description:
       'Innovative solutions in energy, automation, semiconductors, and infrastructure. Advancing sustainability and efficiency for industries and communities worldwide.',
-    desktopImage: '/hero/fuji.webp',
+    desktopImage: '/hero/wate-and-waste-water.jpeg',
     partnerLogo: '/partners/fuji.svg',
   },
   {
@@ -33,7 +33,7 @@ const slides = [
     buttonColor: 'primary',
     description:
       "Integrated energy solutions across solar, wind, hydro, and thermal power. Empowering communities and driving India's transition to sustainable energy.",
-    desktopImage: '/hero/tata-power.webp',
+    desktopImage: '/hero/renewable.jpeg',
     partnerLogo: '/partners/tp.svg',
     invert: true,
   },
@@ -44,7 +44,7 @@ const slides = [
     buttonColor: 'secondary',
     description:
       'Innovative automation, healthcare, and electronic solutions enhancing lives and advancing technology worldwide.',
-    desktopImage: '/hero/omron.jpg',
+    desktopImage: '/hero/robotics.jpeg',
     partnerLogo: '/partners/omron.jpeg',
   },
   {
@@ -54,7 +54,7 @@ const slides = [
     buttonColor: 'primary',
     description:
       'Advanced industrial computing and connectivity solutions, including Panel PCs, IoT Edge Gateways, and Network Switches, engineered for performance, reliability, and innovation.',
-    desktopImage: '/hero/mevic.png',
+    desktopImage: '/hero/iot.jpeg',
     partnerLogo: '/partners/meveic.jpeg',
   },
 ];

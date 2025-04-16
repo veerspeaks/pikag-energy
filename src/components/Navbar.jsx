@@ -22,9 +22,9 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-white shadow-md border-b border-gray-100">
+      <nav className="bg-white shadow-md border-b border-gray-100 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
+          <div className="flex justify-between h-16 ">
             <div className="flex-shrink-0 flex items-center">
               <img src="/logo.png" alt="PikaG Energy" className="h-10 w-auto" />
             </div>
@@ -93,7 +93,7 @@ function Navbar() {
             </div>
 
             {/* Right-side info (desktop only) */}
-            <div className="hidden sm:flex items-center space-x-2 text-sm text-gray-600">
+            <div className="hidden sm:flex items-center space-x-2 text-gray-600 absolute top-[5px] right-[5px] text-[11px] font-bold">
               <span className="hover:text-primary cursor-pointer">English</span>
               <span>|</span>
               <Flag code="IN" style={{ width: 20, height: 14 }} alt="Indian Flag" />
