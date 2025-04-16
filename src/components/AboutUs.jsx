@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const AboutUs = () => {
     return (
-        <div className="py-16 sm:py-24 md:py-28 bg-white">
+        <div className="pt-16 sm:pt-24 md:pt-28 bg-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center" data-aos="fade-up" data-aos-duration="800">
                     <div className="inline-block mb-4">
