@@ -1,5 +1,7 @@
 import collage from '../../public/about-us.png';
 import AboutUs from '../components/AboutUs';
+import Timeline from '../components/Timeline';
+
 function About() {
   return (
     <>
@@ -105,6 +107,9 @@ function About() {
         </div>
       </div> */}
       <AboutUs />
+
+      {/* Timeline Section */}
+      <Timeline />
 
       {/* Certifications */}
       {/* <div className="py-12 sm:py-16 md:py-24 bg-light">
