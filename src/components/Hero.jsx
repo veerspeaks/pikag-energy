@@ -7,53 +7,51 @@ import { Pagination, Autoplay } from 'swiper/modules';
 const slides = [
   {
     titleTop: 'The Future of',
-    titleBottom: 'Energy Generation',
+    titleBottom: 'Industrial Automation',
     highlightColor: 'primary',
     buttonColor: 'primary',
     description:
       'Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.',
-    desktopImage: '/hero-banner.png',
-    mobileImage: '/hero-banner2.jpg',
+    desktopImage: '/hero/hero-banner.png',
+    mobileImage: '/hero/hero-banner2.jpg',
   },
   {
     titleTop: 'The Future of',
-    titleBottom: 'Energy Generation',
+    titleBottom: 'Water and Waste Water Management',
     highlightColor: 'secondary',
     buttonColor: 'secondary',
     description:
-      'Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.',
+      'Innovative solutions in energy, automation, semiconductors, and infrastructure. Advancing sustainability and efficiency for industries and communities worldwide.',
     desktopImage:
-      'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80',
+      '/hero/fuji.webp',
   },
   {
     titleTop: 'The Future of',
-    titleBottom: 'Energy Generation',
+    titleBottom: 'Renewable Energy',
     highlightColor: 'primary',
     buttonColor: 'primary',
     description:
-      'Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.',
-    desktopImage: '/hero-banner.png',
-    mobileImage: '/hero-banner2.jpg',
+      "Integrated energy solutions across solar, wind, hydro, and thermal power. Empowering communities and driving India's transition to sustainable energy.",
+    desktopImage: '/hero/tata-power.webp',
   },
   {
     titleTop: 'The Future of',
-    titleBottom: 'Energy Generation',
+    titleBottom: 'Industrial Robotics',
     highlightColor: 'secondary',
     buttonColor: 'secondary',
     description:
-      'Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.',
+      'Innovative automation, healthcare, and electronic solutions enhancing lives and advancing technology worldwide.',
     desktopImage:
-      'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80',
+      '/hero/omron.jpg',
   },
   {
     titleTop: 'The Future of',
-    titleBottom: 'Energy Generation',
+    titleBottom: 'Industrial IOT',
     highlightColor: 'primary',
     buttonColor: 'primary',
     description:
-      'Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.',
-    desktopImage: '/hero-banner.png',
-    mobileImage: '/hero-banner2.jpg',
+      'Advanced industrial computing and connectivity solutions, including Panel PCs, IoT Edge Gateways, and Network Switches, engineered for performance, reliability, and innovation.',
+    desktopImage: '/hero/mevic.png',
   },
 ];
 
