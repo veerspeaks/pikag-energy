@@ -128,11 +128,11 @@ const ProductDetail = () => {
                 </div>
                 
                 <div className="mt-8">
-                  {product.partnerLogo && (
+                  {category.partnerLogo && (
                     <div className="mb-4">
                       <p className="text-sm text-gray-500 mb-2">Partner</p>
                       <img 
-                        src={product.partnerLogo} 
+                        src={category.partnerLogo} 
                         alt="Partner Logo" 
                         className="h-10 max-w-[180px] object-contain"
                         onError={(e) => {
