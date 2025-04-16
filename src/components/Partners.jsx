@@ -2,37 +2,26 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules';
-
+import { Pagination } from 'swiper/modules';
 
 const data = [
-  {
-    logo1: "/partners/lk.png",
-    alternateText: "Lauritz Knudsen",
-  },
-  {
-    logo1: "/partners/tp.png",
-    alternateText: "Tata Power",
-    invert: true
-  },
-  {
-    logo1: "/partners/omron.jpeg",
-    alternateText: "Omron",
-  },
-  {
-    logo1: "/partners/meveic.jpeg",
-    alternateText: "Maevic",
-  },
+  { logo1: "/partners/lk.png", alternateText: "Lauritz Knudsen" },
+  { logo1: "/partners/tp.svg", alternateText: "Tata Power", invert: true },
+  { logo1: "/partners/omron.jpeg", alternateText: "Omron" },
+  { logo1: "/partners/meveic.jpeg", alternateText: "Maevic" },
+  { logo1: "/partners/fuji.svg", alternateText: "Fuji Electronics" },
 ];
 
 const Partners = () => {
   return (
     <div className="py-16 bg-white text-dark">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-semibold text-center mb-12">Our <span className='text-primary'>Partners</span> </h2>
+        <h2 className="text-4xl font-semibold text-center mb-12">
+          Our <span className="text-primary">Partners</span>
+        </h2>
 
-        {/* Grid layout for large screens */}
-        <div className="hidden lg:grid grid-cols-4 gap-8">
+        {/* Desktop grid view (4 logos per row) */}
+        <div className="hidden lg:grid grid-cols-5 gap-8">
           {data.map((partner, index) => (
             <div
               key={index}
@@ -42,29 +31,30 @@ const Partners = () => {
                 src={partner.logo1}
                 alt={partner.alternateText}
                 className="max-w-full h-auto object-contain"
-                    style={{ filter: partner.invert ? 'invert(1)' : 'none' }}
+                style={{ filter: partner.invert ? 'invert(1)' : 'none' }}
               />
             </div>
           ))}
         </div>
 
-        {/* Swiper for smaller screens */}
+        {/* Mobile Swiper view */}
         <div className="lg:hidden">
           <Swiper
+            modules={[Pagination]}
             spaceBetween={30}
             slidesPerView={2}
-            loop={true}
-            // autoplay={{ delay: 2500, disableOnInteraction: false }}
             pagination={{ clickable: true }}
+            loop={false}
+            className="w-full"
           >
             {data.map((partner, index) => (
               <SwiperSlide key={index} className="flex justify-center">
-                <div className="p-4 size-40 flex items-center justify-center transition transform hover:scale-105 hover:shadow-xl rounded-lg">
+                <div className="p-4 h-40 w-full flex items-center justify-center mb-6 transition transform hover:scale-105 hover:shadow-xl rounded-lg">
                   <img
                     src={partner.logo1}
                     alt={partner.alternateText}
                     className="max-w-full h-auto object-contain"
-                    style={{ filter: partner.invert ? 'invert(1)' : 'none' }} // Invert color for Tata Power
+                    style={{ filter: partner.invert ? 'invert(1)' : 'none' }}
                   />
                 </div>
               </SwiperSlide>

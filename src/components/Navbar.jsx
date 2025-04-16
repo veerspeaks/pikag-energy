@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import OfferingsDropdown from './OfferingsDropdown';
+import Flag from 'react-world-flags';
 
 function Navbar() {
   const location = useLocation();
@@ -90,6 +91,18 @@ function Navbar() {
                 </Link>
               </div>
             </div>
+
+            {/* Right-side info (desktop only) */}
+            <div className="hidden sm:flex items-center space-x-2 text-sm text-gray-600">
+              <span className="hover:text-primary cursor-pointer">English</span>
+              <span>|</span>
+              <Flag code="IN" style={{ width: 20, height: 14 }} alt="Indian Flag" />
+              <span>|</span>
+              <a href="tel:+911234567890" className="hover:text-primary">+91 12345 67890</a>
+              <span>|</span>
+              <a href="mailto:info@example.com" className="hover:text-primary">info@example.com</a>
+            </div>
+
             <div className="flex items-center sm:hidden">
               <button
                 onClick={toggleMenu}
