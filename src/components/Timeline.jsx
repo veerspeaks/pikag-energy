@@ -6,43 +6,43 @@ const timelineData = [
     year: "2007",
     title: "Started working with BCH",
     description: "Began our journey in the Industrial automation field, working with BCH to provide cutting-edge automation solutions.",
-    imagePlaceholder: "https://placehold.co/600x400/3eba85/FFFFFF/png?text=2007+BCH+Partnership"
+    imagePlaceholder: "timeline-images/1.jpg"
   },
   {
     year: "2008",
     title: "Started working with C&S",
     description: "Expanded our industrial automation expertise by partnering with C&S, strengthening our position in the market.",
-    imagePlaceholder: "https://placehold.co/600x400/3eba85/FFFFFF/png?text=2008+C%26S+Partnership"
+    imagePlaceholder: "timeline-images/2.jpg"
   },
   {
     year: "2009",
     title: "Partnered with Siemens and L&T",
     description: "Became authorized dealer of Industrial Automation solutions for Siemens and L&T, bringing world-class technology to our clients.",
-    imagePlaceholder: "https://placehold.co/600x400/3eba85/FFFFFF/png?text=2009+Siemens+%26+L%26T"
+    imagePlaceholder: "timeline-images/3.jpg"
   },
   {
     year: "2011",
     title: "Major milestone achievement",
     description: "Successfully executed high-profile industrial automation projects for JSPL, NALCO and other major industrial players.",
-    imagePlaceholder: "https://placehold.co/600x400/3eba85/FFFFFF/png?text=2011+Major+Projects"
+    imagePlaceholder: "timeline-images/4.jpg"
   },
   {
     year: "2018",
     title: "Entered Renewable Energy Market",
     description: "Expanded into renewable energy solutions, becoming a trusted system integrator for CREDA (Chhattisgarh Renewable Energy Development Agency).",
-    imagePlaceholder: "https://placehold.co/600x400/3eba85/FFFFFF/png?text=2018+Renewable+Energy"
+    imagePlaceholder: "timeline-images/5.jpg"
   },
   {
     year: "2020",
     title: "Solar & LED manufacturing expansion",
     description: "Executed numerous solar pumps, rooftops and power plant projects. Established an industrial LED manufacturing unit in Bhilai, Chhattisgarh.",
-    imagePlaceholder: "https://placehold.co/600x400/3eba85/FFFFFF/png?text=2020+Solar+%26+LED"
+    imagePlaceholder: "timeline-images/6.jpg"
   },
   {
     year: "2023",
     title: "ISP & Telecommunications entry",
     description: "Entered the ISP market through the BBNL project, establishing strategic collaborations with BSNL and other major telecommunications players in Odisha.",
-    imagePlaceholder: "https://placehold.co/600x400/3eba85/FFFFFF/png?text=2023+ISP+Market"
+    imagePlaceholder: "timeline-images/7.jpg"
   }
 ];
 
@@ -199,7 +199,7 @@ const Timeline = () => {
                         <img 
                           src={item.imagePlaceholder} 
                           alt={item.title} 
-                          className="w-full h-64 sm:h-72 lg:h-80 object-cover"
+                          className="w-full h-72 sm:h-80 lg:h-96 object-cover"
                         />
                       </div>
                     </div>

@@ -1,32 +1,38 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
     const services = [
         
         {
-            title: "Motor Drives & Controls",
+            title: "Industrial Automation Solutions",
             description: "Advanced drive systems from top manufacturers that optimize performance, energy efficiency, and precision control.",
             image: "/products/ik/ac-drive/xd3000.png",
+            link: "/solutions/industrial-automation"
         },
         {
-            title: "Industrial Solution",
+            title: "Water management solutions",
             description: "High-performance industrial equipment from leading manufacturers, optimized for efficiency and reliability. Your Trust, Our Responsibility.",
             image: "/services/industrialmachinery.jpg",
+            link: "/solutions/water-wastewater"
         },
         {
-            title: "Robotics & Automation",
+            title: "Robotics solutions",
             description: "Cutting-edge robotics solutions to streamline operations, increase productivity, and reduce operational costs.",
             image: "/services/robotics.jpg",
+            link: "/solutions/robotics"
         },
         {
-            title: "Solar Power",
+            title: "Renewable Energy Solutions",
             description: "Industry-leading solar panel systems that deliver sustainable energy and significant cost savings for your business.",
             image: "/services/solarsolution.jpg",
+            link: "/solutions/renewable-energy"
         },
         {
-            title: "IoT & Smart Devices",
+            title: "Industrial IoT Solutions",
             description: "Connected solutions that provide real-time monitoring, analytics, and control to transform your operations and decision-making.",
             image: "/services/iot.jpg",
+            link: "/solutions/iiot"
         }
     ];
 
@@ -69,9 +75,20 @@ const Services = () => {
                                     </h3>
                                     
                                     {/* Description - Visible on Hover */}
-                                    <p className="text-base text-gray-700 leading-relaxed mt-2  ">
+                                    <p className="text-base text-gray-700 leading-relaxed mt-2 mb-4">
                                         {service.description}
                                     </p>
+                                    
+                                    {/* Learn More Button */}
+                                    <Link 
+                                        to={service.link}
+                                        className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
+                                    >
+                                        Learn More
+                                        <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </Link>
                                 </div>
                             </div>
                         ))}
