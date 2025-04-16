@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-y-12 md:gap-x-8">
 
                     {/* Contact Information Section */}
-                    <div className="md:col-span-4 lg:col-span-6 max-w-md mx-auto md:mx-0 text-center md:text-left">
+                    <div className="md:col-span-4 lg:col-span-6 max-w-md  mx-0 md:mx-auto md:mx-0 text-center md:text-left">
                         <h3 className="text-4xl font-bold mb-4 text-dark ">Contact <span className='text-primary'>Information</span></h3>
                         <p className="text-lg text-gray-600 mb-6">Reach out to us through any of these channels</p>
 
@@ -17,7 +17,7 @@ const Footer = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 3H5a2 2 0 00-2 2v16a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2h-6M9 18l-3-3 3-3m8 6l-3-3 3-3" />
                                 </svg>
-                                <p className="text-lg text-gray-600">Plot No 173, Engineering Park, Heavy Industrial Area, Hathkhoj, Bhilai, C.G.</p>
+                                <p className="text-lg text-gray-600 text-left">Plot No 173, Engineering Park, Heavy Industrial Area, Hathkhoj, Bhilai, C.G.</p>
                             </div>
 
                             <div className="flex items-center justify-start">

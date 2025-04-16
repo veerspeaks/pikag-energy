@@ -42,7 +42,7 @@ const Partners = () => {
           <Swiper
             modules={[Pagination]}
             spaceBetween={30}
-            slidesPerView={1}
+            slidesPerView={2}
             pagination={{ clickable: true }}
             loop={false}
             className="w-full"
