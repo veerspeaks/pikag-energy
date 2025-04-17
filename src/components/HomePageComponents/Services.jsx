@@ -7,13 +7,13 @@ const Services = () => {
         {
             title: "Industrial Automation Solutions",
             description: "Advanced drive systems from top manufacturers that optimize performance, energy efficiency, and precision control.",
-            image: "/products/ik/ac-drive/xd3000.png",
+            image: "/hero/industrial-automation.jpeg",
             link: "/solutions/industrial-automation"
         },
         {
             title: "Water management solutions",
             description: "High-performance industrial equipment from leading manufacturers, optimized for efficiency and reliability. Your Trust, Our Responsibility.",
-            image: "/services/industrialmachinery.jpg",
+            image: "/hero/wate-and-waste-water.jpeg",
             link: "/solutions/water-wastewater"
         },
         {
@@ -31,7 +31,7 @@ const Services = () => {
         {
             title: "Industrial IoT Solutions",
             description: "Connected solutions that provide real-time monitoring, analytics, and control to transform your operations and decision-making.",
-            image: "/services/iot.jpg",
+            image: "/hero/iot.jpeg",
             link: "/solutions/iiot"
         }
     ];
@@ -40,7 +40,7 @@ const Services = () => {
         <div className="py-14 sm:py-20 bg-light">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto" data-aos="fade-up">
-                    <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Our Services</h2>
+                    <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Our Solutions</h2>
                     <p className="mt-3 text-2xl sm:text-3xl md:text-4xl leading-tight font-extrabold tracking-tight text-dark">
                         Premium Industry Solutions
                     </p>
@@ -50,46 +50,60 @@ const Services = () => {
                 </div>
 
                 <div className="mt-12 sm:mt-16">
-                    <div className="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-8 sm:gap-10 md:gap-12">
                         {services.map((service, index) => (
                             <div 
                                 key={index} 
-                                className="group relative h-[400px] rounded-lg shadow-md overflow-hidden border border-gray-100" 
+                                className="relative bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md group"
                                 data-aos="fade-up" 
                                 data-aos-delay={100 * (index + 1)}
                             >
-                                {/* Image Section - Top */}
-                                <div className="absolute inset-0 w-full h-full transition-transform duration-500 ease-in-out ">
-                                    <img 
-                                        src={service.image} 
-                                        alt={service.title}
-                                        className="w-full h-full object-cover"
-                                    />
+                                <div className="flex flex-col md:flex-row">
+                                    {/* Left Side - Image */}
+                                    <div className="md:w-2/5 lg:w-1/3 relative">
+                                        <div className="md:absolute md:inset-0 h-56 md:h-full">
+                                            <img 
+                                                src={service.image} 
+                                                alt={service.title}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                        {/* Overlay gradient for better text visibility */}
+                                        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+                                    </div>
+                                    
+                                    {/* Right Side - Content */}
+                                    <div className="md:w-3/5 lg:w-2/3 p-6 md:p-8 md:pl-10 flex flex-col justify-between md:ml-auto">
+                                        <div>
+                                            <h3 className="text-xl md:text-2xl font-bold text-dark mb-2 md:mb-4">
+                                                {service.title}
+                                            </h3>
+                                            <p className="text-gray-700 mb-4 md:mb-6 md:pr-8">
+                                                {service.description}
+                                            </p>
+                                        </div>
+                                        
+                                        <div className="mt-auto">
+                                            <Link 
+                                                to={service.link}
+                                                className="inline-flex items-center text-primary font-medium group-hover:text-primary-dark transition-colors duration-300"
+                                            >
+                                                Learn More
+                                                <svg 
+                                                    className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" 
+                                                    fill="none" 
+                                                    viewBox="0 0 24 24" 
+                                                    stroke="currentColor"
+                                                >
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </Link>
+                                        </div>
+                                    </div>
                                 </div>
                                 
-                                {/* Content Section - Bottom */}
-                                <div className="absolute bottom-0 w-full bg-white p-6 transition-all duration-500 ease-in-out ">
-                                    {/* Title - Always Visible */}
-                                    <h3 className="text-xl font-bold text-dark mb-2">
-                                        {service.title}
-                                    </h3>
-                                    
-                                    {/* Description - Visible on Hover */}
-                                    <p className="text-base text-gray-700 leading-relaxed mt-2 mb-4">
-                                        {service.description}
-                                    </p>
-                                    
-                                    {/* Learn More Button */}
-                                    <Link 
-                                        to={service.link}
-                                        className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
-                                    >
-                                        Learn More
-                                        <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </Link>
-                                </div>
+                                {/* Color accent line on top */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
                             </div>
                         ))}
                     </div>

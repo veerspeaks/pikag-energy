@@ -3,6 +3,7 @@ import AboutUs from '../components/AboutUs';
 import Timeline from '../components/Timeline';
 import Partners from '../components/Partners';
 import Stats from '../components/Stats';
+import Clients from '../components/Clients';
 
 function About() {
   return (
@@ -18,11 +19,12 @@ function About() {
               Powering the <span className="text-primary">Future</span>
             </h1>
             <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
-              Since 2018, PikaG Energy has been at the forefront of sustainable energy solutions, setting global standards in solar power and LED technology.
+              Since 2007, PikaG Energy has been at the forefront of sustainable energy solutions, setting global standards in solar power and LED technology.
             </p>
           </div>
         </div>
       </div>
+      <Stats />
       
       {/* Company Overview / Our Story */}
       {/* <div className="py-16 sm:py-24 md:py-32 bg-white">
@@ -84,7 +86,7 @@ function About() {
           </div>
         </div>
       </div> */}
-      <Partners />
+      
       <AboutUs />
 
       {/* Timeline Section */}
@@ -133,8 +135,8 @@ function About() {
         </div>
       </div> */}
 
-      
-      <Stats />
+      {/* <Partners /> */}
+      <Clients />
     </>
   );
 }

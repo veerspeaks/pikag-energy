@@ -10,20 +10,36 @@ const HeroSlide = ({
   buttonColor = 'primary',
   partnerLogo,
   invert = false,
+  link,
 }) => {
+  // Helper function to get the correct title color class
+  const getTitleColorClass = () => {
+    if (highlightColor === 'primary') return 'text-primary';
+    if (highlightColor === 'secondary') return 'text-secondary';
+    return 'text-primary'; // Default fallback
+  };
+
+  // Helper function to get the correct button color classes
+  const getButtonColorClasses = () => {
+    if (buttonColor === 'primary') return 'bg-primary hover:bg-primary/90';
+    if (buttonColor === 'secondary') return 'bg-secondary hover:bg-secondary/90';
+    return 'bg-primary hover:bg-primary/90'; // Default fallback
+  };
+
   return (
     <div className="relative w-full h-full">
       {/* Desktop layout */}
       <div className="hidden lg:flex w-full h-full">
-        <div className="w-1/2 py-12 px-8 flex items-center">
-          <div className="lg:max-w-2xl ml-auto" data-aos="fade-right">
+        {/* Left side - Content */}
+        <div className="w-1/2 flex items-center justify-center bg-white">
+          <div className="w-full max-w-lg px-12" data-aos="fade-right">
             <h1 className="text-4xl tracking-tight font-extrabold text-dark sm:text-5xl md:text-6xl leading-[1.1]">
               <span className="block mb-1">{titleTop}</span>
-              <span className={`block text-${highlightColor}`}>
+              <span className={`block ${getTitleColorClass()}`}>
                 {titleBottom}
               </span>
             </h1>
-            <p className="mt-5 text-base text-gray-700 sm:mt-6 sm:text-lg sm:max-w-xl md:mt-6 md:text-xl leading-relaxed">
+            <p className="mt-5 text-base text-gray-700 sm:mt-6 sm:text-lg md:mt-6 md:text-xl leading-relaxed">
               {description}
             </p>
             <div className="mt-8 flex gap-6 items-center">
@@ -43,16 +59,17 @@ const HeroSlide = ({
               )}
 
               <Link
-                to="/products"
-                className={`inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-${buttonColor} hover:bg-${buttonColor}/90 transform hover:scale-101 transition-all duration-300 shadow-md`}
+                to={link || "/products"}
+                className={`inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white ${getButtonColorClasses()} transform hover:scale-101 transition-all duration-300 shadow-md`}
               >
-                View Products
+                View Solution
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="w-1/2">
+        {/* Right side - Image */}
+        <div className="w-1/2 overflow-hidden">
           <img
             src={desktopImage}
             alt={titleBottom}
@@ -75,7 +92,7 @@ const HeroSlide = ({
           <div data-aos="fade-up">
             <h1 className="text-3xl tracking-tight font-extrabold text-dark sm:text-4xl">
               <span className="block">{titleTop}</span>
-              <span className={`block text-${highlightColor}`}>
+              <span className={`block ${getTitleColorClass()}`}>
                 {titleBottom}
               </span>
             </h1>
@@ -101,10 +118,10 @@ const HeroSlide = ({
               )}
 
               <Link
-                to="/products"
-                className={`inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-md text-white bg-${buttonColor} hover:bg-${buttonColor}/90 transform hover:scale-101 transition-all duration-300 shadow-md`}
+                to={link || "/products"}
+                className={`inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-md text-white ${getButtonColorClasses()} transform hover:scale-101 transition-all duration-300 shadow-md`}
               >
-                View Products
+                View Solution
               </Link>
             </div>
           </div>

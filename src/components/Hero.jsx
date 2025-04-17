@@ -11,20 +11,21 @@ const slides = [
     highlightColor: 'primary',
     buttonColor: 'primary',
     description:
-      'Complete solutions for Solar, LED Lighting, PCB and Industrial range. Setting global standards with endless solutions for our clients and our planet.',
-    desktopImage: '/hero/industrial-automation.jpeg',
+      'Complete solution for Industrial Automation, drivers, servo, motion, and PLC.',
     desktopImage: '/hero/industrial-automation.jpeg',
     partnerLogo: '/partners/lk.png',
+    link: '/solutions/industrial-automation'
   },
   {
     titleTop: 'The Future of',
-    titleBottom: 'Water and Waste Water Management',
+    titleBottom: 'Water & Waste Water Management',
     highlightColor: 'secondary',
     buttonColor: 'secondary',
     description:
-      'Innovative solutions in energy, automation, semiconductors, and infrastructure. Advancing sustainability and efficiency for industries and communities worldwide.',
+      'Complete solution for Water and Waste Water Management, field monitoring and control instruments.',
     desktopImage: '/hero/wate-and-waste-water.jpeg',
     partnerLogo: '/partners/fuji.svg',
+    link: '/solutions/water-wastewater'
   },
   {
     titleTop: 'The Future of',
@@ -32,10 +33,11 @@ const slides = [
     highlightColor: 'primary',
     buttonColor: 'primary',
     description:
-      "Integrated energy solutions across solar, wind, hydro, and thermal power. Empowering communities and driving India's transition to sustainable energy.",
+      'Complete solution for Solar rooftop, solar power plant, and solar grid.',
     desktopImage: '/hero/renewable.jpeg',
     partnerLogo: '/partners/tp.svg',
     invert: true,
+    link: '/solutions/renewable-energy'
   },
   {
     titleTop: 'The Future of',
@@ -43,9 +45,10 @@ const slides = [
     highlightColor: 'secondary',
     buttonColor: 'secondary',
     description:
-      'Innovative automation, healthcare, and electronic solutions enhancing lives and advancing technology worldwide.',
+      'Complete solution for Industrial Robotics, automation, and manufacturing.',
     desktopImage: '/hero/robotics.jpeg',
     partnerLogo: '/partners/omron.jpeg',
+    link: '/solutions/robotics'
   },
   {
     titleTop: 'The Future of',
@@ -53,9 +56,10 @@ const slides = [
     highlightColor: 'primary',
     buttonColor: 'primary',
     description:
-      'Advanced industrial computing and connectivity solutions, including Panel PCs, IoT Edge Gateways, and Network Switches, engineered for performance, reliability, and innovation.',
+      'Complete solution for Industrial IOT, including Panel PCs, IoT Edge Gateways, and Network Switches.',
     desktopImage: '/hero/iot.jpeg',
-    partnerLogo: '/partners/meveic.jpeg',
+    partnerLogo: '/partners/meveic.jpg',
+    link: '/solutions/iiot'
   },
 ];
 

@@ -5,7 +5,7 @@ import lkLogo from "../../public/partners/lk.png";
 import fuji from "../../public/partners/fuji.svg";
 import tataPowerLogo from "../../public/partners/tata.png";
 import omron from "../../public/partners/omron.jpeg";
-import meveic from "../../public/partners/meveic.jpeg";
+import meveic from "../../public/partners/meveic.jpg";
 
 const offerings = [
   {
@@ -582,26 +582,26 @@ const offerings = [
           },
         ],
       },
-      {
-        id: "Renewable Energy Solution by PikaG",
-        title: "Renewable Energy Solution by PikaG",
-        products: [
-          {
-            id: "battery-systems",
-            name: "Battery Storage Systems",
-            imageUrl: "/images/products/battery-systems.jpg",
-            description:
-              "Advanced battery storage solutions for renewable energy applications.",
-            productPointers: [
-              "High-capacity lithium-ion battery systems",
-              "Modular design for flexible capacity",
-              "Integrated battery management system",
-              "Compatible with various renewable energy sources",
-            ],
-            partnerUrl: "https://www.pikag.com/battery-systems",
-          },
-        ],
-      },
+      // {
+      //   id: "Renewable Energy Solution by PikaG",
+      //   title: "Renewable Energy Solution by PikaG",
+      //   products: [
+      //     {
+      //       id: "battery-systems",
+      //       name: "Battery Storage Systems",
+      //       imageUrl: "/images/products/battery-systems.jpg",
+      //       description:
+      //         "Advanced battery storage solutions for renewable energy applications.",
+      //       productPointers: [
+      //         "High-capacity lithium-ion battery systems",
+      //         "Modular design for flexible capacity",
+      //         "Integrated battery management system",
+      //         "Compatible with various renewable energy sources",
+      //       ],
+      //       partnerUrl: "https://www.pikag.com/battery-systems",
+      //     },
+      //   ],
+      // },
     ],
   },
   {
@@ -972,56 +972,60 @@ const offerings = [
         title: "Industrial IoT",
         products: [
           {
-            id: "iot-gateways",
-            name: "IoT Gateways",
-            imageUrl: "/images/products/iot-gateways.jpg",
+            id: "SP-1002-4S-AL",
+            name: "SP-1002-4S-AL",
+            imageUrl: "/products/maestro/sp-1002-4s-al.png",
             description:
               "Industrial IoT gateway devices for data collection and transmission.",
             productPointers: [
-              "Edge computing capability",
-              "Multiple protocol support",
-              "Secure data transmission",
-              "Rugged design for industrial environments",
-            ],
-            partnerUrl: "https://industrial.omron.us/en/products/iot-gateways",
+              "High speed 2GHz",
+              "4G GSM Modem with SIM Slot",
+              "WiFi 802.11 a/b/g/n (Optional)",
+              "Data loss prevention and fail safe operation",
+            ]
           },
           {
-            id: "sensors-network",
-            name: "Sensor Networks",
-            imageUrl: "/images/products/sensor-networks.jpg",
+            id: "SP-1000 Series",
+            name: "SP-1000 Series",
+            imageUrl: "/products/maestro/sp-1000-series.png",
             description:
               "Connected sensor networks for industrial monitoring applications.",
             productPointers: [
-              "Wireless sensor network solutions",
-              "Long battery life for remote deployments",
-              "Wide range of sensor types available",
-              "Scalable for large facility monitoring",
-            ],
-            partnerUrl: "https://industrial.omron.us/en/products/sensors",
+              "4G GSM Modem with SIM Slot",
+              "WiFi 802.11 a/b/g/n (Optional)s",
+              "Data loss prevention and fail safe operation",
+              "TLS 1.2 + encrypted cloud communication",
+            ]
           },
-        ],
-      },
-      {
-        id: "iot-software",
-        title: "IoT Software Platforms",
-        products: [
           {
-            id: "cloud-platform",
-            name: "Cloud Monitoring Platform",
-            imageUrl: "/images/products/cloud-platform.jpg",
+            id: "SP-2004",
+            name: "SP-2004",
+            imageUrl: "/products/maestro/sp-2004.png",
             description:
-              "Cloud-based monitoring and analytics platform for industrial IoT applications.",
+              "Connected sensor networks for industrial monitoring applications.",
             productPointers: [
-              "Real-time data visualization",
-              "Advanced analytics and reporting",
-              "Remote system management",
-              "Custom dashboard creation",
-            ],
-            partnerUrl:
-              "https://industrial.omron.us/en/products/cloud-platform",
+              "64 bit (2.0 GHz/2.6GHz) Processor",
+              "4GB RAM",
+              "IEC61131-3 / Node-RED / Python",
+              "TLS 1.2 + encrypted cloud communication",
+            ]
           },
+          {
+            id: "CloudXTU-M3005",
+            name: "CloudXTU-M3005",
+            imageUrl: "/products/maestro/cloudxtu-m3005.png",
+            description:
+              "Connected sensor networks for industrial monitoring applications.",
+            productPointers: [
+              "CPU - Intel Atom E3845, Frequency - 1.91 GHz",
+              "BIOS - AMI SPI Flash BIOS",
+              "Watchdog timer 256 level time interval system reset, software programmable",
+              "Microsoft Windows - Windows 7, Windows 7 Embedded Linux - Kernal 3.x",
+            ]
+          }
         ],
-      },
+      }
+      
     ],
   },
 ];

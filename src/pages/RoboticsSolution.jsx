@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import offerings from '../data/offerings'
+import ProductCard from '../components/ProductCard'
 
 const RoboticsSolution = () => {
   // Get the robotics data from offerings
@@ -13,17 +14,17 @@ const RoboticsSolution = () => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="/services/robotics-hero.jpg"
+            src="/hero/robotics.jpeg"
             alt="Robotics Solutions"
           />
           <div className="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Robotics Solutions
+            Industrial Robotics Solutions
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300">
-            Cutting-edge robotics solutions to streamline operations, increase productivity, and reduce operational costs for your business.
+            Cutting-edge robotics solutions to streamline operations, increase productivity, and reduce operational costs.
           </p>
         </div>
       </div>
@@ -55,13 +56,13 @@ const RoboticsSolution = () => {
       {/* Description */}
       <div className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div className="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-center">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Transform Your Operations
+                Transform Your Manufacturing
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                Our robotics solutions are designed to revolutionize your manufacturing and logistics operations. From articulated robots to integrated vision systems, we offer a complete range of automation tools to enhance precision, speed, and safety.
+                Our industrial robotics solutions help businesses automate processes, improve precision, and increase operational efficiency, leading to higher productivity and quality.
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex items-start">
@@ -81,7 +82,7 @@ const RoboticsSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Enhanced precision and quality control
+                    Enhanced precision and product quality
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -91,7 +92,7 @@ const RoboticsSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Improved workplace safety and ergonomics
+                    Improved workplace safety and reduced injury risk
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -101,14 +102,14 @@ const RoboticsSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Reduced labor costs and operational expenses
+                    Reduced labor costs and higher return on investment
                   </p>
                 </div>
               </div>
             </div>
-            <div className="mt-10 lg:mt-0">
-              <img className="rounded-lg shadow-lg" src="/services/robotics-detail.jpg" alt="Robotics Solutions" />
-            </div>
+            {/* <div className="mt-10 lg:mt-0">
+              <img className="rounded-lg shadow-lg" src="/services/robotics-detail.jpg" alt="Industrial Robotics" />
+            </div> */}
           </div>
         </div>
       </div>
@@ -119,7 +120,7 @@ const RoboticsSolution = () => {
           <div className="lg:text-center">
             <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Products</h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Our Robotics Solutions
+              Our Industrial Robotics Solutions
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
               Explore our range of high-quality robotics products and systems.
@@ -130,38 +131,14 @@ const RoboticsSolution = () => {
             {solution.subcategories.map((subcategory) => (
               <div key={subcategory.id} className="mb-16">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">{subcategory.title}</h3>
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {subcategory.products.map((product) => (
-                    <div key={product.id} className="bg-white overflow-hidden shadow rounded-lg">
-                      <div className="p-4">
-                        <div className="aspect-w-3 aspect-h-2">
-                          <img 
-                            className="object-cover shadow-lg rounded-lg" 
-                            src={product.imageUrl} 
-                            alt={product.name} 
-                          />
-                        </div>
-                        <div className="mt-4">
-                          <h4 className="text-lg font-bold text-gray-900">{product.name}</h4>
-                          <p className="mt-2 text-sm text-gray-500">{product.description}</p>
-                          <ul className="mt-2 space-y-1 text-sm text-gray-500 list-disc list-inside">
-                            {product.productPointers.slice(0, 3).map((point, index) => (
-                              <li key={index}>{point}</li>
-                            ))}
-                          </ul>
-                          <div className="mt-4">
-                            <a
-                              href={product.partnerUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-primary hover:text-primary-dark font-medium"
-                            >
-                              Learn more about {product.name} <span aria-hidden="true">&rarr;</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <ProductCard 
+                      key={product.id} 
+                      product={product} 
+                      solutionId={solution.id} 
+                      subcategoryId={subcategory.id}
+                    />
                   ))}
                 </div>
               </div>
@@ -175,7 +152,7 @@ const RoboticsSolution = () => {
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="block">Ready to automate your operations?</span>
-            <span className="block text-white">Get in touch with our robotics experts today.</span>
+            <span className="block text-white">Get in touch with our experts today.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">

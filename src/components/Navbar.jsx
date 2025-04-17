@@ -93,7 +93,7 @@ function Navbar() {
             </div>
 
             {/* Right-side info (desktop only) */}
-            <div className="hidden sm:flex items-center space-x-2 text-gray-600 text-[11px] font-bold">
+            <div className="hidden sm:flex items-center space-x-2 text-gray-600 text-[14px] font-bold">
               <span className="hover:text-primary cursor-pointer">English</span>
               <span>|</span>
               <Flag code="IN" style={{ width: 20, height: 14 }} alt="Indian Flag" />

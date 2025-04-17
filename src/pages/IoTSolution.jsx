@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import offerings from '../data/offerings'
+import ProductCard from '../components/ProductCard'
 
 const IoTSolution = () => {
-  // Get the Industrial IoT data from offerings
+  // Get the IoT data from offerings
   const solution = offerings.find(item => item.id === "iiot");
 
   return (
@@ -13,10 +14,10 @@ const IoTSolution = () => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="/services/iot-hero.jpg"
+            src="/hero/iot.jpeg"
             alt="Industrial IoT Solutions"
           />
-          <div className="absolute inset-0 bg-indigo-900 mix-blend-multiply opacity-70" aria-hidden="true"></div>
+          <div className="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -58,10 +59,10 @@ const IoTSolution = () => {
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Smart Industrial Solutions
+                Connect Your Industrial Systems
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                Our Industrial IoT solutions connect your equipment, facilities, and workforce to deliver actionable insights in real-time. These smart systems optimize operations, predict maintenance needs, and improve decision-making across your organization.
+                Our Industrial IoT solutions help businesses integrate smart sensing, real-time monitoring, and advanced analytics to optimize operations, improve productivity, and enable data-driven decision making.
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex items-start">
@@ -71,7 +72,7 @@ const IoTSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Real-time monitoring and analytics of industrial equipment
+                    Real-time monitoring and predictive maintenance
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -81,7 +82,7 @@ const IoTSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Predictive maintenance to reduce downtime and repair costs
+                    Enhanced operational efficiency and productivity
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -91,7 +92,7 @@ const IoTSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Enhanced operational efficiency and resource optimization
+                    Data-driven insights for informed decision making
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -101,7 +102,7 @@ const IoTSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Secure data collection and advanced analytics for better decision-making
+                    Secure, scalable systems for industrial environments
                   </p>
                 </div>
               </div>
@@ -130,38 +131,14 @@ const IoTSolution = () => {
             {solution.subcategories.map((subcategory) => (
               <div key={subcategory.id} className="mb-16">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">{subcategory.title}</h3>
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {subcategory.products.map((product) => (
-                    <div key={product.id} className="bg-white overflow-hidden shadow rounded-lg">
-                      <div className="p-4">
-                        <div className="aspect-w-3 aspect-h-2">
-                          <img 
-                            className="object-cover shadow-lg rounded-lg" 
-                            src={product.imageUrl} 
-                            alt={product.name} 
-                          />
-                        </div>
-                        <div className="mt-4">
-                          <h4 className="text-lg font-bold text-gray-900">{product.name}</h4>
-                          <p className="mt-2 text-sm text-gray-500">{product.description}</p>
-                          <ul className="mt-2 space-y-1 text-sm text-gray-500 list-disc list-inside">
-                            {product.productPointers.slice(0, 3).map((point, index) => (
-                              <li key={index}>{point}</li>
-                            ))}
-                          </ul>
-                          <div className="mt-4">
-                            <a
-                              href={product.partnerUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-primary hover:text-primary-dark font-medium"
-                            >
-                              Learn more about {product.name} <span aria-hidden="true">&rarr;</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <ProductCard 
+                      key={product.id} 
+                      product={product} 
+                      solutionId={solution.id} 
+                      subcategoryId={subcategory.id}
+                    />
                   ))}
                 </div>
               </div>
@@ -174,8 +151,8 @@ const IoTSolution = () => {
       <div className="bg-primary">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            <span className="block">Ready to digitize your industrial operations?</span>
-            <span className="block text-white">Get in touch with our IoT experts today.</span>
+            <span className="block">Ready to connect your industrial systems?</span>
+            <span className="block text-white">Get in touch with our experts today.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">

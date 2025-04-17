@@ -8,7 +8,7 @@ const data = [
   { logo1: "/partners/lk.png", alternateText: "Lauritz Knudsen" },
   { logo1: "/partners/tp.svg", alternateText: "Tata Power", invert: true },
   { logo1: "/partners/omron.jpeg", alternateText: "Omron" },
-  { logo1: "/partners/meveic.jpeg", alternateText: "Maevic" },
+  { logo1: "/partners/meveic.jpg", alternateText: "Maevic" },
   { logo1: "/partners/fuji.svg", alternateText: "Fuji Electronics" },
 ];
 

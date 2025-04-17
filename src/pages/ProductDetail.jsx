@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import offerings from '../data/offerings';
 
 const ProductDetail = () => {
@@ -44,6 +44,24 @@ const ProductDetail = () => {
     );
   }
 
+  // Get the URL path for the solution page with subcategory hash
+  const getSolutionPath = () => {
+    switch(categoryId) {
+      case 'industrial-automation':
+        return `/solutions/industrial-automation#${subcategoryId.toLowerCase().replace(/\s+/g, '-')}`;
+      case 'robotics':
+        return `/solutions/robotics#${subcategoryId.toLowerCase().replace(/\s+/g, '-')}`;
+      case 'water-wastewater':
+        return `/solutions/water-wastewater#${subcategoryId.toLowerCase().replace(/\s+/g, '-')}`;
+      case 'renewable-energy':
+        return `/solutions/renewable-energy#${subcategoryId.toLowerCase().replace(/\s+/g, '-')}`;
+      case 'iiot':
+        return `/solutions/iiot#${subcategoryId.toLowerCase().replace(/\s+/g, '-')}`;
+      default:
+        return '/';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -51,14 +69,14 @@ const ProductDetail = () => {
         <nav className="flex mb-6" aria-label="Breadcrumb">
           <ol className="inline-flex items-center space-x-1 md:space-x-3">
             <li className="inline-flex items-center">
-              <a href="/" className="text-gray-600 hover:text-primary text-sm">Home</a>
+              <Link to="/" className="text-gray-600 hover:text-primary text-sm">Home</Link>
             </li>
             <li>
               <div className="flex items-center">
                 <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
                 </svg>
-                <a href="/offerings" className="ml-1 text-gray-600 hover:text-primary text-sm md:ml-2">Offerings</a>
+                <span className="ml-1 text-gray-600 text-sm md:ml-2">Offerings</span>
               </div>
             </li>
             <li>
@@ -66,7 +84,7 @@ const ProductDetail = () => {
                 <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
                 </svg>
-                <span className="ml-1 text-gray-600 text-sm md:ml-2">{category.title}</span>
+                <Link to={getSolutionPath()} className="ml-1 text-gray-600 hover:text-primary text-sm md:ml-2">{category.title}</Link>
               </div>
             </li>
             <li>
@@ -74,7 +92,15 @@ const ProductDetail = () => {
                 <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
                 </svg>
-                <span className="ml-1 text-gray-600 text-sm md:ml-2">{subcategory.title}</span>
+                <Link to={getSolutionPath()} className="ml-1 text-gray-600 hover:text-primary text-sm md:ml-2">{subcategory.title}</Link>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center">
+                <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
+                </svg>
+                <span className="ml-1 text-primary font-medium text-sm md:ml-2">{product.name}</span>
               </div>
             </li>
           </ol>

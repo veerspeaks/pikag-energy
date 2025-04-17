@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     name: 'Meveic',
-    logo: '/partners/meveic.jpeg',
+    logo: '/partners/meveic.jpg',
     review:
       'They consistently deliver outstanding performance and excellence in energy solutions while maintaining transparent collaboration and efficiency.',
   },

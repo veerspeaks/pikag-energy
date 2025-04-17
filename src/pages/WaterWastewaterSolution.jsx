@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import offerings from '../data/offerings'
+import ProductCard from '../components/ProductCard'
 
 const WaterWastewaterSolution = () => {
   // Get the water and wastewater data from offerings
@@ -13,17 +14,17 @@ const WaterWastewaterSolution = () => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="/services/water-management-hero.jpg"
-            alt="Water and Wastewater Management Solutions"
+            src="/hero/wate-and-waste-water.jpeg"
+            alt="Water & Wastewater Solutions"
           />
-          <div className="absolute inset-0 bg-blue-900 mix-blend-multiply opacity-70" aria-hidden="true"></div>
+          <div className="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Water & Wastewater Management Solutions
+            Water & Wastewater Solutions
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300">
-            High-performance equipment from leading manufacturers, optimized for efficiency and reliability in water management systems.
+            High-performance industrial equipment from leading manufacturers, optimized for efficiency and reliability in water and wastewater management.
           </p>
         </div>
       </div>
@@ -55,13 +56,13 @@ const WaterWastewaterSolution = () => {
       {/* Description */}
       <div className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div className="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-center">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                 Efficient Water Management
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                Our water and wastewater management solutions are designed to improve efficiency, reduce operational costs, and ensure compliance with environmental regulations. We offer advanced equipment for monitoring, control, and treatment processes.
+                Our water and wastewater solutions help businesses optimize water usage, meet regulatory requirements, and minimize environmental impact while reducing operational costs.
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex items-start">
@@ -71,7 +72,7 @@ const WaterWastewaterSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Advanced monitoring and control systems
+                    Comprehensive water management and treatment systems
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -81,7 +82,7 @@ const WaterWastewaterSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Energy-efficient pumping and treatment solutions
+                    Advanced monitoring and control systems for optimal performance
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -91,7 +92,7 @@ const WaterWastewaterSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Regulatory compliance and environmental protection
+                    Reduced operational costs and environmental compliance
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -101,14 +102,14 @@ const WaterWastewaterSolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Comprehensive service and expert technical support
+                    Expert consultation and customized solutions for your specific needs
                   </p>
                 </div>
               </div>
             </div>
-            <div className="mt-10 lg:mt-0">
+            {/* <div className="mt-10 lg:mt-0">
               <img className="rounded-lg shadow-lg" src="/services/water-management-detail.jpg" alt="Water Management" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -119,10 +120,10 @@ const WaterWastewaterSolution = () => {
           <div className="lg:text-center">
             <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Products</h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Our Water Management Solutions
+              Our Water & Wastewater Solutions
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Explore our range of high-quality water and wastewater management products.
+              Explore our range of high-quality water management products and systems.
             </p>
           </div>
 
@@ -130,38 +131,14 @@ const WaterWastewaterSolution = () => {
             {solution.subcategories.map((subcategory) => (
               <div key={subcategory.id} className="mb-16">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">{subcategory.title}</h3>
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {subcategory.products.map((product) => (
-                    <div key={product.id} className="bg-white overflow-hidden shadow rounded-lg">
-                      <div className="p-4">
-                        <div className="aspect-w-3 aspect-h-2">
-                          <img 
-                            className="object-cover shadow-lg rounded-lg" 
-                            src={product.imageUrl} 
-                            alt={product.name} 
-                          />
-                        </div>
-                        <div className="mt-4">
-                          <h4 className="text-lg font-bold text-gray-900">{product.name}</h4>
-                          <p className="mt-2 text-sm text-gray-500">{product.description}</p>
-                          <ul className="mt-2 space-y-1 text-sm text-gray-500 list-disc list-inside">
-                            {product.productPointers.slice(0, 3).map((point, index) => (
-                              <li key={index}>{point}</li>
-                            ))}
-                          </ul>
-                          <div className="mt-4">
-                            <a
-                              href={product.partnerUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-primary hover:text-primary-dark font-medium"
-                            >
-                              Learn more about {product.name} <span aria-hidden="true">&rarr;</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <ProductCard 
+                      key={product.id} 
+                      product={product} 
+                      solutionId={solution.id} 
+                      subcategoryId={subcategory.id}
+                    />
                   ))}
                 </div>
               </div>
@@ -174,7 +151,7 @@ const WaterWastewaterSolution = () => {
       <div className="bg-primary">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            <span className="block">Ready to improve your water management?</span>
+            <span className="block">Ready to optimize your water management?</span>
             <span className="block text-white">Get in touch with our experts today.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">

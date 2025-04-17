@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import offerings from '../data/offerings'
+import ProductCard from '../components/ProductCard'
 
 const RenewableEnergySolution = () => {
   // Get the renewable energy data from offerings
@@ -13,10 +14,10 @@ const RenewableEnergySolution = () => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="/services/renewable-energy-hero.jpg"
+            src="/hero/renewable.jpeg"
             alt="Renewable Energy Solutions"
           />
-          <div className="absolute inset-0 bg-green-900 mix-blend-multiply opacity-60" aria-hidden="true"></div>
+          <div className="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -55,13 +56,13 @@ const RenewableEnergySolution = () => {
       {/* Description */}
       <div className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div className="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-center">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Sustainable Energy Solutions
+                Power Your Business Sustainably
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                Our renewable energy solutions are designed to reduce your carbon footprint while lowering operational costs. We offer comprehensive solar power systems for residential, commercial, and industrial applications.
+                Our renewable energy solutions are designed to reduce your carbon footprint, lower energy costs, and provide reliable, sustainable power for your business operations.
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex items-start">
@@ -71,7 +72,7 @@ const RenewableEnergySolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Reduced energy costs and operational expenses
+                    Significant reduction in electricity costs
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -81,7 +82,7 @@ const RenewableEnergySolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Environmental sustainability and reduced carbon footprint
+                    Enhanced brand image and sustainability credentials
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -91,7 +92,7 @@ const RenewableEnergySolution = () => {
                     </svg>
                   </div>
                   <p className="ml-3 text-base text-gray-500">
-                    Energy independence and protection from grid outages
+                    Reduced carbon footprint and environmental impact
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -106,9 +107,9 @@ const RenewableEnergySolution = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 lg:mt-0">
+            {/* <div className="mt-10 lg:mt-0">
               <img className="rounded-lg shadow-lg" src="/services/renewable-energy-detail.jpg" alt="Renewable Energy" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -130,38 +131,14 @@ const RenewableEnergySolution = () => {
             {solution.subcategories.map((subcategory) => (
               <div key={subcategory.id} className="mb-16">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">{subcategory.title}</h3>
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {subcategory.products.map((product) => (
-                    <div key={product.id} className="bg-white overflow-hidden shadow rounded-lg">
-                      <div className="p-4">
-                        <div className="aspect-w-3 aspect-h-2">
-                          <img 
-                            className="object-cover shadow-lg rounded-lg" 
-                            src={product.imageUrl} 
-                            alt={product.name} 
-                          />
-                        </div>
-                        <div className="mt-4">
-                          <h4 className="text-lg font-bold text-gray-900">{product.name}</h4>
-                          <p className="mt-2 text-sm text-gray-500">{product.description}</p>
-                          <ul className="mt-2 space-y-1 text-sm text-gray-500 list-disc list-inside">
-                            {product.productPointers.slice(0, 3).map((point, index) => (
-                              <li key={index}>{point}</li>
-                            ))}
-                          </ul>
-                          <div className="mt-4">
-                            <a
-                              href={product.partnerUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-primary hover:text-primary-dark font-medium"
-                            >
-                              Learn more about {product.name} <span aria-hidden="true">&rarr;</span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <ProductCard 
+                      key={product.id} 
+                      product={product} 
+                      solutionId={solution.id} 
+                      subcategoryId={subcategory.id}
+                    />
                   ))}
                 </div>
               </div>
