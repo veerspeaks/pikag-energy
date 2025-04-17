@@ -199,7 +199,7 @@ const Timeline = () => {
                         <img 
                           src={item.imagePlaceholder} 
                           alt={item.title} 
-                          className="w-full h-72 sm:h-80 lg:h-96 object-cover"
+                          className="w-full h-84 sm:h-120 lg:h-120 object-cover"
                         />
                       </div>
                     </div>
@@ -214,8 +214,8 @@ const Timeline = () => {
               ))}
             </div>
 
-            {/* Controls */}
-            <div className="flex justify-between mt-4">
+            
+            {/* <div className="flex justify-between mt-4">
               <button 
                 onClick={() => handleYearClick(activeIndex === 0 ? timelineData.length - 1 : activeIndex - 1)}
                 className="p-2 bg-gray-50 hover:bg-gray-100 rounded-full text-gray-600 transition border border-gray-200"
@@ -247,7 +247,7 @@ const Timeline = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

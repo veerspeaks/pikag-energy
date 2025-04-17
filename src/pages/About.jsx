@@ -84,6 +84,7 @@ function About() {
           </div>
         </div>
       </div> */}
+      <Partners />
       <AboutUs />
 
       {/* Timeline Section */}
@@ -132,7 +133,7 @@ function About() {
         </div>
       </div> */}
 
-      <Partners />
+      
       <Stats />
     </>
   );

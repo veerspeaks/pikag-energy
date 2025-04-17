@@ -94,8 +94,9 @@ const Services = () => {
                         ))}
                     </div>
                 </div>
-
-                <div className="mt-16 sm:mt-20" data-aos="fade-up">
+          
+           {/* Hidden on both mobile and desktop */}
+                <div className="mt-16 sm:mt-20 hidden" data-aos="fade-up">
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                         <div className="p-8 sm:p-10">
                             <h3 className="text-2xl font-bold text-dark mb-6 text-center">Why Choose Us</h3>

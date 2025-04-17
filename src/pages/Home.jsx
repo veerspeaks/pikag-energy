@@ -19,10 +19,10 @@ function Home() {
       <Services />
       {/* <Solution /> */}
       <Partners />
-      <Clients />
-      <Stats /> 
+      {/* <Clients /> */}
+      {/* <Stats />  */}
       {/* <Milestones />  */}
-      <FAQ />
+      {/* <FAQ /> */}
       <CTA />
 
       

@@ -13,9 +13,9 @@ const AboutUs = () => {
                             <div className="w-10 h-1 bg-primary rounded-full"></div>
                         </div>
                     </div>
-                    <h2 className="text-3xl sm:text-5xl font-extrabold text-dark mb-6 sm:mb-8 leading-tight">
+                    {/* <h2 className="text-3xl sm:text-5xl font-extrabold text-dark mb-6 sm:mb-8 leading-tight">
                         Who <span className="text-primary">We Are</span>
-                    </h2>
+                    </h2> */}
                 </div>
 
                 <div className="prose prose-lg mx-auto text-center text-gray-700 mb-8" data-aos="fade-up" data-aos-delay="100">
@@ -23,11 +23,11 @@ const AboutUs = () => {
                         PIKAG ENERGY PRIVATE LIMITED was incorporated on 26/03/2018 under the companies Act, 2013. As a start-up organization, we are committed to endless business ethics and look to develop lasting associations with our clients, vendors, associates, and everyone we do business with.
                     </p>
                     <p className="text-base sm:text-lg leading-relaxed mb-6">
-                        We place special emphasis on the "on-time and on-budget" delivery of solar power plants and LED lights, optimized to deliver superior output. With our subsidiaries, we have designed and built a significant volume of systems since our founding.
+                        We cover the gap between the demand and supply of energy
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10" data-aos="fade-up" data-aos-delay="200">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="200">
                     <div className="bg-light p-6 rounded-lg border-l-4 border-primary">
                         <h4 className="font-bold text-dark text-lg mb-2">Our Green Revolution Mission</h4>
                         <p className="text-sm sm:text-base text-gray-700">

@@ -243,10 +243,10 @@ const offerings = [
               "The M5 Series Servo System offers high-speed, high-precision control with EtherCAT, IP65 protection, versatile positioning, and advanced features like resonance suppression and frequency analysis, ensuring robust, reliable performance in industrial applications.",
             partnerLogo: "/images/partners/lk-logo.png",
             productPointers: [
-              "High-speed, high-precision control enhances machine performance and efficiency",
-              "Multiple control options and robust protection for diverse industrial environments",
-              "Real-time frequency analysis improves reliability",
-              "PC tool simplifies configuration, tuning, and debugging",
+              "Capacity: 0.1kW to 15kW",
+              "Voltage: 200Vac / 400Vac",
+              "Speed: 1500rpm/ 3000rpm",
+              "Control: Pulse/Analog or Network",
             ],
             partnerUrl:
               "https://www.lk-ea.com/products/industrial-automation-control/servo/m5",
@@ -267,7 +267,8 @@ const offerings = [
             productPointers: [
               "Increased efficiency by reducing development time and effort",
               "Seamless integration with systems and devices through extensive connectivity",
-              "Enhanced automation with features like datalogging and custom scripting",
+              "HMI Range: Text Display",
+              "4 inch to 15 inch TFT color LCD",
             ],
             partnerUrl:
               "https://www.lk-ea.com/products/industrial-automation-control/human-machine-interface-hmi/xt",

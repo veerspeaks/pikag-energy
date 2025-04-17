@@ -20,7 +20,7 @@ const AboutUsHome = () => {
 
                 <div className="prose prose-lg mx-auto text-center text-gray-700 mb-8" data-aos="fade-up" data-aos-delay="100">
                     <p className="mb-6 text-base sm:text-lg leading-relaxed">
-                        PIKAG ENERGY PRIVATE LIMITED was incorporated on 26/03/2018 under the companies Act, 2013. As a start-up organization, we are committed to endless business ethics and look to develop lasting associations with our clients, vendors, associates, and everyone we do business with.
+                    Established in 1998, Pikag Group has become a key player in various sectors, headquartered in Bhilai. We strive to deliver innovative solutions and services that foster excellence and drive success in the industrial landscape.
                     </p>
                     <p className="text-base sm:text-lg leading-relaxed mb-6">
                         We place special emphasis on the "on-time and on-budget" delivery of solar power plants and LED lights, optimized to deliver superior output. With our subsidiaries, we have designed and built a significant volume of systems since our founding.
