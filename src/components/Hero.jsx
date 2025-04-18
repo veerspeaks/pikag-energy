@@ -24,7 +24,7 @@ const slides = [
     description:
       'Complete solution for Water and Waste Water Management, field monitoring and control instruments. Join us, build better.',
     desktopImage: '/hero/wate-and-waste-water.jpeg',
-    partnerLogo: '/partners/fuji.svg',
+    partnerLogo: '/partners/fuji.png',
     link: '/solutions/water-wastewater'
   },
   {
@@ -35,8 +35,7 @@ const slides = [
     description:
       'Complete solution for Solar rooftop, solar power plant, and solar grid. Let us help you build a better business, a better future and a better world. Years of expertise and trust of thousands.',
     desktopImage: '/hero/renewable.jpeg',
-    partnerLogo: '/partners/tp.svg',
-    invert: true,
+    partnerLogo: '/partners/tp.jpeg',
     link: '/solutions/renewable-energy'
   },
   {
@@ -58,14 +57,14 @@ const slides = [
     description:
       'Complete solution for Industrial IOT, including Panel PCs, IoT Edge Gateways, and Network Switches. Let us help you build a better business, a better future and a better world. Years of expertise and trust of thousands.',
     desktopImage: '/hero/iot.jpeg',
-    partnerLogo: '/partners/meveic.jpg',
+    partnerLogo: '/partners/maestrotek.jpg',
     link: '/solutions/iiot'
   },
 ];
 
 function Hero() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-white">
       <Swiper
         spaceBetween={50}
         slidesPerView={1}

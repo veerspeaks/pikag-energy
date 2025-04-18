@@ -5,7 +5,7 @@ import lkLogo from "../../public/partners/lk.png";
 import fuji from "../../public/partners/fuji.svg";
 import tataPowerLogo from "../../public/partners/tata.png";
 import omron from "../../public/partners/omron.jpeg";
-import meveic from "../../public/partners/meveic.jpg";
+import maestrotek from "../../public/partners/maestrotek.jpg";
 
 const offerings = [
   {
@@ -965,7 +965,7 @@ const offerings = [
   {
     id: "iiot",
     title: "Industrial IoT Solutions",
-    partnerLogo: meveic,
+    partnerLogo: maestrotek,
     subcategories: [
       {
         id: "industrial-iot",
