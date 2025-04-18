@@ -134,8 +134,6 @@ function About() {
           </div>
         </div>
       </div> */}
-
-      {/* <Partners /> */}
       <Clients />
     </>
   );

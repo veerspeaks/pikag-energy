@@ -24,7 +24,7 @@ const slides = [
     description:
       'Complete solution for Water and Waste Water Management, field monitoring and control instruments.',
     desktopImage: '/hero/wate-and-waste-water.jpeg',
-    partnerLogo: '/partners/fuji.svg',
+    partnerLogo: '/partners/fuji.png',
     link: '/solutions/water-wastewater'
   },
   {
@@ -57,24 +57,24 @@ const slides = [
     description:
       'Complete solution for Industrial IOT, including Panel PCs, IoT Edge Gateways, and Network Switches.',
     desktopImage: '/hero/iot.jpeg',
-    partnerLogo: '/partners/meveic.jpg',
+    partnerLogo: '/partners/maestrotek.jpg',
     link: '/solutions/iiot'
   },
 ];
 
 function Hero() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-white">
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
         pagination={true}
         modules={[Pagination, Autoplay]}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        // loop={true}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
         className="h-[700px] lg:h-[500px]"
       >
         {slides.map((slide, index) => (
