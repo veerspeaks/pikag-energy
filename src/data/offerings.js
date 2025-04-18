@@ -638,7 +638,7 @@ const offerings = [
           {
             id: "TM S Series Collaborative Robot",
             name: "TM S Series Collaborative Robot",
-            imageUrl: "/images/products/vision-systems.jpg",
+            imageUrl: "https://assets.omron.com/m/618e83a408892bf7/Landscape_L-Carousel-Image-TMS-cobot-202310-565x520-TM12.png",
             description:
               "Machine vision systems for robotic guidance and inspection.",
             productPointers: [
@@ -659,7 +659,7 @@ const offerings = [
             description:
               "High-speed collaborative robot for precise pick and place operations.",
             productPointers: [
-              "Ast and simple programming",
+              "Fast and simple programming",
               "Built-in intelligent vision",
               "This product complies with the combined scope of ISO 10218-1:2011 and ISO/TS-15066",
               "Fast changeover using TMvision and Landmark",
@@ -929,7 +929,7 @@ const offerings = [
               "https://automation.omron.com/en/mx/products/family/i4H",
           },
           {
-            id: "e-Cobra  ",
+            id: "e-Cobra",
             name: "e-Cobra",
             imageUrl: "https://assets.omron.com/m/1c238a6257f1977c/Landscape_L-eCobra-800-1400x400-jpg.jpg",
             description:

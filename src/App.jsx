@@ -37,26 +37,28 @@ function App() {
       <Navbar />
       <EnquiryButton />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/credentials" element={<Credentials />} />
-        <Route path="/products/laurtiz-knudsen" element={<Products productsMap={LK_PRODUCTS_MAP} productTypes={LK_PRODUCT_TYPES} pageName="laurtiz-knudsen" />} />
-        <Route path="/products/pikag" element={<Products productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
-        <Route path="/products/omron" element={<Products productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />
-        <Route path="/omron-solutions" element={<OmronSolutionsPage />} />
-        
-        {/* New offerings routes */}
-        <Route path="/offerings/:categoryId/:subcategoryId/:productId" element={<ProductDetail />} />
+      <div className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/credentials" element={<Credentials />} />
+          <Route path="/products/laurtiz-knudsen" element={<Products productsMap={LK_PRODUCTS_MAP} productTypes={LK_PRODUCT_TYPES} pageName="laurtiz-knudsen" />} />
+          <Route path="/products/pikag" element={<Products productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
+          <Route path="/products/omron" element={<Products productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />
+          <Route path="/omron-solutions" element={<OmronSolutionsPage />} />
+          
+          {/* New offerings routes */}
+          <Route path="/offerings/:categoryId/:subcategoryId/:productId" element={<ProductDetail />} />
 
-        {/* New solution pages */}
-        <Route path="/solutions/industrial-automation" element={<IndustrialAutomationSolution />} />
-        <Route path="/solutions/water-wastewater" element={<WaterWastewaterSolution />} />
-        <Route path="/solutions/robotics" element={<RoboticsSolution />} />
-        <Route path="/solutions/renewable-energy" element={<RenewableEnergySolution />} />
-        <Route path="/solutions/iiot" element={<IoTSolution />} />
-      </Routes>
+          {/* New solution pages */}
+          <Route path="/solutions/industrial-automation" element={<IndustrialAutomationSolution />} />
+          <Route path="/solutions/water-wastewater" element={<WaterWastewaterSolution />} />
+          <Route path="/solutions/robotics" element={<RoboticsSolution />} />
+          <Route path="/solutions/renewable-energy" element={<RenewableEnergySolution />} />
+          <Route path="/solutions/iiot" element={<IoTSolution />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

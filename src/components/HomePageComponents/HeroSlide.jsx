@@ -27,7 +27,7 @@ const HeroSlide = ({
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full flex flex-col">
       {/* Desktop layout */}
       <div className="hidden lg:flex w-full h-full">
         {/* Left side - Content */}
@@ -79,8 +79,8 @@ const HeroSlide = ({
       </div>
 
       {/* Mobile layout */}
-      <div className="h-full lg:hidden">
-        <div className="relative h-[250px] overflow-hidden">
+      <div className="flex flex-col w-full lg:hidden">
+        <div className="w-full h-[250px] overflow-hidden">
           <img
             src={mobileImage || desktopImage}
             alt={titleBottom}
@@ -88,15 +88,15 @@ const HeroSlide = ({
           />
         </div>
 
-        <div className="px-4 py-6 flex flex-col justify-center">
-          <div data-aos="fade-up">
+        <div className="px-4 py-6 bg-white flex-grow">
+          <div>
             <h1 className="text-3xl tracking-tight font-extrabold text-dark sm:text-4xl">
               <span className="block">{titleTop}</span>
               <span className={`block ${getTitleColorClass()}`}>
                 {titleBottom}
               </span>
             </h1>
-            <p className="mt-3 text-sm text-gray-600 sm:text-base sm:max-w-xl">
+            <p className="mt-3 text-sm text-gray-600 sm:text-base">
               {description}
             </p>
 

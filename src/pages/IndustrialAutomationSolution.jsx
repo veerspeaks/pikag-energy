@@ -163,14 +163,6 @@ const IndustrialAutomationSolution = () => {
                 Contact Us
               </Link>
             </div>
-            <div className="ml-3 inline-flex rounded-md shadow">
-              <Link
-                to="/products"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-dark hover:bg-primary-darker"
-              >
-                View All Products
-              </Link>
-            </div>
           </div>
         </div>
       </div>
