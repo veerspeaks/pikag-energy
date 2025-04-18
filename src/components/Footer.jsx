@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { MapPin, Phone, Mail } from 'lucide-react'
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin  } from 'lucide-react'
 
 const Footer = () => {
     return (
@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-y-12 md:gap-x-8">
 
                     {/* Contact Information Section */}
-                    <div className="md:col-span-4 lg:col-span-6 max-w-md  mx-0 md:mx-auto md:mx-0 text-center md:text-left">
+                    <div className="md:col-span-4 lg:col-span-6 max-w-md  mx-0 ">
                         <h3 className="text-4xl font-bold mb-4 text-dark ">Contact <span className='text-primary'>Information</span></h3>
                         <p className="text-lg text-gray-600 mb-6">Reach out to us through any of these channels</p>
 
@@ -21,12 +21,12 @@ const Footer = () => {
 
                             <div className="flex items-center justify-start">
                                 <Phone className="text-primary me-2 w-1/12" />
-                                <p className="text-lg text-gray-600 w-11/12">+91 9755021473</p>
+                                <p className="text-lg text-gray-600 w-11/12 text-left">+91 9755021473</p>
                             </div>
 
                             <div className="flex items-center justify-start">
                                 <Mail className=" text-primary me-2 w-1/12" />
-                                <p className="text-lg text-gray-600 w-11/12">info@pikag.com</p>
+                                <p className="text-lg text-gray-600 w-11/12 text-left">info@pikag.com</p>
                             </div>
                         </div>
                     </div>
@@ -35,8 +35,8 @@ const Footer = () => {
                     <div className="hidden md:block md:col-span-1 lg:hidden"></div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 col-span-1 md:col-span-7 lg:col-span-6 gap-y-10 sm:gap-y-12 sm:gap-x-8 md:gap-x-8 lg:gap-x-10 mt-8 md:mt-4 text-center sm:text-left">
                         <div>
-                            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary mb-5 sm:mb-6">Our Partners</h3>
-                            <ul className="space-y-3">
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary mb-5 sm:mb-6 text-left">Our Partners</h3>
+                            <ul className="space-y-3 text-left">
                                 <li><a href="https://www.lk-ea.com/" className="text-base hover:text-primary transition-colors">Laurtiz Knudsen</a></li>
                                 <li><a href="https://automation.omron.com/en/mx/products/category/robotics" className="text-base hover:text-primary transition-colors">Omron</a></li>
                                 <li><a href="https://waaree.com/" className="text-base hover:text-primary transition-colors">Tata Power</a></li>
@@ -45,9 +45,11 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="sm:col-span-2 md:col-span-1 lg:col-span-1">
-                            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary mb-5 sm:mb-6">Follow Us</h3>
-                            <ul className="space-y-3">
-                                <li><a href="#" className="text-base hover:text-primary transition-colors">LinkedIn</a></li>
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary mb-5 sm:mb-6 text-left">Follow Us</h3>
+                            <ul className="space-y-3 text-left">
+                                <li><a href="https://www.linkedin.com/company/pikag-energy-private-limited" target='_blank' className="text-base hover:text-primary transition-colors text-left"><span>LinkedIn</span></a></li>
+                                <li><a href="#" className="text-base hover:text-primary transition-colors text-left">  <span>Instagram</span></a></li>
+                                <li><a href="#" className="text-base hover:text-primary transition-colors text-left"><span>Facebook</span></a></li>
                             </ul>
                         </div>
                     </div>
