@@ -6,7 +6,7 @@ import { Pagination } from 'swiper/modules';
 
 const data = [
   { logo1: "/partners/lk.png", alternateText: "Lauritz Knudsen" },
-  { logo1: "/partners/tp.svg", alternateText: "Tata Power", invert: true },
+  { logo1: "/partners/tp.jpeg", alternateText: "Tata Power"},
   { logo1: "/partners/omron.jpeg", alternateText: "Omron" },
   { logo1: "/partners/meveic.jpg", alternateText: "Maevic" },
   { logo1: "/partners/fuji.svg", alternateText: "Fuji Electronics" },
@@ -31,7 +31,6 @@ const Partners = () => {
                 src={partner.logo1}
                 alt={partner.alternateText}
                 className="max-w-full h-auto object-contain"
-                style={{ filter: partner.invert ? 'invert(1)' : 'none' }}
               />
             </div>
           ))}

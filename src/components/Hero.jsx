@@ -35,8 +35,7 @@ const slides = [
     description:
       'Complete solution for Solar rooftop, solar power plant, and solar grid.',
     desktopImage: '/hero/renewable.jpeg',
-    partnerLogo: '/partners/tp.svg',
-    invert: true,
+    partnerLogo: '/partners/tp.jpeg',
     link: '/solutions/renewable-energy'
   },
   {

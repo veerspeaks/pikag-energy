@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { MapPin, Phone, Mail } from 'lucide-react'
 
 const Footer = () => {
     return (
@@ -13,25 +14,19 @@ const Footer = () => {
                         <p className="text-lg text-gray-600 mb-6">Reach out to us through any of these channels</p>
 
                         <div className="space-y-4">
-                            <div className="flex items-center justify-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 3H5a2 2 0 00-2 2v16a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2h-6M9 18l-3-3 3-3m8 6l-3-3 3-3" />
-                                </svg>
-                                <p className="text-lg text-gray-600 text-left">Plot No 173, Engineering Park, Heavy Industrial Area, Hathkhoj, Bhilai, C.G.</p>
+                            <div className="flex justify-start">
+                                <MapPin className=" text-primary me-2 w-1/12" />
+                                <p className="text-lg text-gray-600 text-left w-11/12">Plot No 173, Engineering Park, Heavy Industrial Area, Hathkhoj, Bhilai, C.G.</p>
                             </div>
 
                             <div className="flex items-center justify-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l5-5 5 5M3 16l5 5 5-5M14 4h6a2 2 0 012 2v12a2 2 0 01-2 2h-6M6 4H4a2 2 0 00-2 2v12a2 2 0 002 2h2" />
-                                </svg>
-                                <p className="text-lg text-gray-600">+91 9755021473</p>
+                                <Phone className="text-primary me-2 w-1/12" />
+                                <p className="text-lg text-gray-600 w-11/12">+91 9755021473</p>
                             </div>
 
                             <div className="flex items-center justify-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 5l7 7-7 7M8 5l-7 7 7 7" />
-                                </svg>
-                                <p className="text-lg text-gray-600">info@pikag.com</p>
+                                <Mail className=" text-primary me-2 w-1/12" />
+                                <p className="text-lg text-gray-600 w-11/12">info@pikag.com</p>
                             </div>
                         </div>
                     </div>
