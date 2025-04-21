@@ -3,10 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import { motion } from 'framer-motion';
 
 const data = [
   { logo1: "/partners/lk.png", alternateText: "Lauritz Knudsen" },
-  { logo1: "/partners/tp.jpeg", alternateText: "Tata Power"},
+  { logo1: "/partners/tp.jpeg", alternateText: "Tata Power" },
   { logo1: "/partners/omron.jpeg", alternateText: "Omron" },
   { logo1: "/partners/maestrotek.jpg", alternateText: "Maestrotek" },
   { logo1: "/partners/fuji.png", alternateText: "Fuji Electronics" },
@@ -16,9 +17,12 @@ const Partners = () => {
   return (
     <div className="py-16 bg-white text-dark">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-semibold text-center mb-12">
+        <motion.h2 className="text-4xl font-semibold text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}>
           Our <span className="text-primary">Partners</span>
-        </h2>
+        </motion.h2>
 
         {/* Desktop grid view (4 logos per row) */}
         <div className="hidden lg:grid grid-cols-5 gap-8">
