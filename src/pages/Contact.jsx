@@ -1,4 +1,47 @@
 import { useState } from 'react';
+import { MapPin, Phone, Mail } from 'lucide-react';
+
+const offices = [
+  {
+    name: "Mumbai",
+    address: "603, Quantum Tower, Andheri East, Mumbai, Maharashtra 400059",
+    phone: "+91 8723456901",
+    email: "mumbai@pikag.com",
+  },
+  {
+    name: "Bhubaneswar",
+    address: "204, Tech Park, Patia, Bhubaneswar, Odisha 751024",
+    phone: "+91 9834567290",
+    email: "bbsr@pikag.com",
+  },
+  {
+    name: "Raipur",
+    address: "501, Magneto Mall, GE Road, Raipur, Chhattisgarh 492001",
+    phone: "+91 9245678013",
+    email: "raipur@pikag.com",
+  },
+  {
+    name: "Bhilai",
+    address: "Plot No 173, Engineering Park, Heavy Industrial Area, Hathkhoj, Bhilai, Chhattisgarh 490026",
+    phone: "+91 9755021473",
+    email: "bhilai@pikag.com",
+  },
+  {
+    name: "Bangalore",
+    address: "315, Whitefield Main Road, EPIP Zone, Bangalore, Karnataka 560066",
+    phone: "+91 8956781234",
+    email: "bangalore@pikag.com",
+  },
+  {
+    name: "Delhi",
+    address: "706, Cyber Hub, DLF Cyber City, Gurugram, Delhi NCR 122002",
+    phone: "+91 9367845120",
+    email: "delhi@pikag.com",
+  },
+];
+
+
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -184,187 +227,32 @@ function Contact() {
               Find the PikaG Energy office nearest to you
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Mumbai Office */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
-              <div className="p-5 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-dark">Mumbai</h3>
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-start">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">
-                      603, Quantum Tower, Andheri East, Mumbai, Maharashtra 400059
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">+91 8723456901</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">mumbai@pikag.com</span>
+            {offices.map((office, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]"
+              >
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-dark">{office.name}</h3>
+                  <div className="mt-4 space-y-3">
+                    <div className="flex items-start">
+                      <MapPin className="flex-shrink-0 h-5 w-5 text-primary mt-0.5" />
+                      <span className="ml-3 text-sm sm:text-base text-gray-700">{office.address}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Phone className="flex-shrink-0 h-5 w-5 text-primary" />
+                      <span className="ml-3 text-sm sm:text-base text-gray-700">{office.phone}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Mail className="flex-shrink-0 h-5 w-5 text-primary" />
+                      <span className="ml-3 text-sm sm:text-base text-gray-700">{office.email}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Bhubaneswar Office */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
-              <div className="p-5 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-dark">Bhubaneswar</h3>
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-start">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">
-                      204, Tech Park, Patia, Bhubaneswar, Odisha 751024
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">+91 9834567290</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">bbsr@pikag.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Raipur Office */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
-              <div className="p-5 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-dark">Raipur</h3>
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-start">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">
-                      501, Magneto Mall, GE Road, Raipur, Chhattisgarh 492001
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">+91 9245678013</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">raipur@pikag.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Bhilai Office */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
-              <div className="p-5 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-dark">Bhilai</h3>
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-start">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">
-                      Plot No 173, Engineering Park, Heavy Industrial Area, Hathkhoj, Bhilai, Chhattisgarh 490026
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">+91 9755021473</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">bhilai@pikag.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Bangalore Office */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
-              <div className="p-5 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-dark">Bangalore</h3>
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-start">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">
-                      315, Whitefield Main Road, EPIP Zone, Bangalore, Karnataka 560066
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">+91 8956781234</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">bangalore@pikag.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Delhi Office */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
-              <div className="p-5 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-dark">Delhi</h3>
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-start">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">
-                      706, Cyber Hub, DLF Cyber City, Gurugram, Delhi NCR 122002
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">+91 9367845120</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span className="ml-3 text-sm sm:text-base text-gray-700">delhi@pikag.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
