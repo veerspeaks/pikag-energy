@@ -128,7 +128,7 @@ function Navbar() {
               <span>|</span>
               <Flag code="IN" style={{ width: 20, height: 14 }} alt="Indian Flag" />
               <span>|</span>
-              <a href="tel:+919755021473" className="hover:text-primary">+91 9755021473</a>
+              <a href="mailto:info@pikag.com" className="hover:text-primary">info@pikag.com</a>
             </div>
 
             {/* Mobile menu button and phone link */}
