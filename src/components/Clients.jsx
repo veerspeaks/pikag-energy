@@ -1,41 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import nova from '../../public/clients/nova.png';
-import pwd from '../../public/clients/pwd.png';
-import raipur_dev_authority from '../../public/clients/raipur-dev-authority.png';
-import indian_railways from '../../public/clients/indian-railways.png';
-import creda from '../../public/clients/creda.png';
+
+const importImages = import.meta.glob('../../public/clients/*.{png,jpg,jpeg,svg}', { eager: true });
+
+const clients = Object.keys(importImages).map((fileName) => {
+    const name = fileName.split('/').pop().split('.')[0]; 
+    return {
+        id: name,
+        src: `/clients/${fileName}`, 
+        alt: name.toUpperCase() 
+    };
+});
+
+// const clients = [
+//     { id: 1, src: nova, alt: 'Nova' },
+//     { id: 2, src: pwd, alt: 'PWD' },
+//     { id: 3, src: raipur_dev_authority, alt: 'Raipur Development Authority' },
+//     { id: 4, src: indian_railways, alt: 'Indian Railways' },
+//     { id: 5, src: creda, alt: 'CREDA' }
+// ];
 
 const Clients = () => {
-    // Data array for client logos
-    const clients = [
-        { id: 1, src: nova, alt: 'Nova' },
-        { id: 2, src: pwd, alt: 'PWD' },
-        { id: 3, src: raipur_dev_authority, alt: 'Raipur Development Authority' },
-        { id: 4, src: indian_railways, alt: 'Indian Railways' },
-        { id: 5, src: creda, alt: 'CREDA' }
-    ];
-
-    // Animation settings
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    };
-
     return (
         <motion.div
             className="p-10"
-            variants={containerVariants}
             initial="hidden"
             animate="visible"
         >
@@ -54,8 +42,10 @@ const Clients = () => {
                     {clients.map(client => (
                         <motion.div
                             key={client.id}
-                            className="flex justify-center items-center p-1 md:p-4 hover:scale-105 transition-transform duration-300"
-                            variants={itemVariants}
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            exit={{ scale: 0 }}
+                            className="flex justify-center items-center p-1 md:p-4  rounded-lg hover:scale-105  hover:shadow-lg transition-transform duration-300 "
                         >
                             <img src={client.src} alt={client.alt} className="max-h-10 md:max-h-[100px]" />
                         </motion.div>
