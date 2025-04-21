@@ -19,7 +19,7 @@ function About() {
               Powering the <span className="text-primary">Future</span>
             </h1>
             <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
-              Since 2007, PikaG Energy has been at the forefront of sustainable energy solutions, setting global standards in solar power and LED technology.
+              Since 1998, PikaG Energy has been at the forefront of sustainable energy solutions, setting global standards in solar power and LED technology.
             </p>
           </div>
         </div>
