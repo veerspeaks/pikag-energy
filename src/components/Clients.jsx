@@ -5,9 +5,10 @@ const importImages = import.meta.glob('../../public/clients/*.{png,jpg,jpeg,svg}
 
 const clients = Object.keys(importImages).map((fileName) => {
     const name = fileName.split('/').pop().split('.')[0]; 
+    const extension = fileName.split('.').pop(); 
     return {
         id: name,
-        src: `/clients/${fileName}`, 
+        src: `/clients/${name}.${extension}`,
         alt: name.toUpperCase() 
     };
 });
@@ -30,9 +31,7 @@ const Clients = () => {
             <div className="container mx-auto">
                 <motion.h2
                     className="text-4xl font-bold text-center mb-10 tracking-wider"
-                    initial={{ y: -50, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 30, opacity: 0 }}
+
                     transition={{ type: 'spring', stiffness: 260, damping: 20 }}
                 >
                     Our <span className='text-primary'>Clients</span>
