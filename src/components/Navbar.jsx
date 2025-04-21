@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import OfferingsDropdown from './OfferingsDropdown';
 import Flag from 'react-world-flags';
 
@@ -7,9 +7,34 @@ function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOfferingsOpen, setIsOfferingsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Handle scroll effect for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    // Close offerings dropdown when toggling menu
+    if (!isMenuOpen) {
+      setIsOfferingsOpen(false);
+    }
   };
 
   const toggleOfferingsDropdown = () => {
@@ -22,20 +47,25 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-white shadow-md border-b border-gray-100 relative">
+      <nav className={`bg-white shadow-md border-b border-gray-100 fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'py-1' : 'py-2'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 ">
-            <div className="flex-shrink-0 flex items-center size-30">
-              <img src="/logo.png" alt="PikaG Energy" className="h-full w-auto" />
+          <div className="flex justify-between items-center h-14 md:h-16">
+            {/* Logo - always visible */}
+            <div className="flex-shrink-0 flex items-center">
+              <Link to="/">
+                <img src="/logo.png" alt="PikaG Energy" className={`transition-all duration-300 ${scrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`} />
+              </Link>
             </div>
-            <div className="hidden sm:flex sm:flex-1 sm:justify-center">
-              <div className="flex space-x-8">
+
+            {/* Desktop Navigation - hidden on mobile */}
+            <div className="hidden md:flex md:flex-1 md:justify-center">
+              <div className="flex space-x-4 lg:space-x-8">
                 <Link
                   to="/"
                   className={`${location.pathname === '/'
                     ? 'text-primary border-primary font-semibold'
                     : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
-                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}
+                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
                 >
                   Home
                 </Link>
@@ -44,7 +74,7 @@ function Navbar() {
                   className={`${location.pathname === '/about'
                     ? 'text-primary border-primary font-semibold'
                     : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
-                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}
+                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
                 >
                   About
                 </Link>
@@ -53,7 +83,7 @@ function Navbar() {
                 <div className={`relative ${location.pathname.includes('/offerings/')
                   ? 'text-primary border-primary font-semibold'
                   : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
-                  } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}>
+                  } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}>
                   <button
                     type="button"
                     onClick={toggleOfferingsDropdown}
@@ -61,7 +91,7 @@ function Navbar() {
                   >
                     Offerings
                     <svg
-                      className="w-4 h-4 ml-1"
+                      className={`w-4 h-4 ml-1 transition-transform duration-300 ${isOfferingsOpen ? 'rotate-180' : ''}`}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -74,9 +104,9 @@ function Navbar() {
                 <Link
                   to="/contact"
                   className={`${location.pathname === '/contact'
-                    ? 'text-dark border-primary'
+                    ? 'text-primary border-primary font-semibold'
                     : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
-                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium`}
+                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
                 >
                   Contact
                 </Link>
@@ -85,27 +115,34 @@ function Navbar() {
                   className={`${location.pathname === '/credentials'
                     ? 'text-primary border-primary font-semibold'
                     : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
-                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-base tracking-wide`}
+                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
                 >
                   Credentials
                 </Link>
               </div>
             </div>
 
-            {/* Right-side info (desktop only) */}
-            <div className="hidden sm:flex items-center space-x-2 text-gray-600 text-[14px] font-bold">
+            {/* Right-side info - only on desktop */}
+            <div className="hidden md:flex items-center space-x-2 text-gray-600 text-[14px] font-bold">
               <span className="hover:text-primary cursor-pointer">English</span>
               <span>|</span>
               <Flag code="IN" style={{ width: 20, height: 14 }} alt="Indian Flag" />
               <span>|</span>
-              <a href="tel:+911234567890" className="hover:text-primary">+91 9755021473</a>
+              <a href="tel:+919755021473" className="hover:text-primary">+91 9755021473</a>
             </div>
 
-            <div className="flex items-center sm:hidden">
+            {/* Mobile menu button and phone link */}
+            <div className="flex items-center space-x-4 md:hidden">
+              <a href="tel:+919755021473" className="text-primary hover:text-primary-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </a>
+
               <button
                 onClick={toggleMenu}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-dark hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
-                aria-expanded="false"
+                aria-expanded={isMenuOpen}
               >
                 <span className="sr-only">Open main menu</span>
                 {!isMenuOpen ? (
@@ -122,9 +159,13 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu, show/hide based on menu state */}
-        <div className={`${isMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
-          <div className="pt-2 pb-3 space-y-1">
+        {/* Mobile menu - slide down animation */}
+        <div 
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="pt-2 pb-3 space-y-1 px-4 border-t border-gray-200 bg-gray-50">
             <Link
               to="/"
               className={`${location.pathname === '/'
@@ -147,14 +188,18 @@ function Navbar() {
             </Link>
 
             {/* Mobile Offerings Button */}
-            <div className="border-l-4 border-transparent">
+            <div className={`border-l-4 ${
+              location.pathname.includes('/offerings/') 
+                ? 'border-primary bg-primary/10' 
+                : 'border-transparent'
+            }`}>
               <button
                 onClick={toggleOfferingsDropdown}
                 className="w-full text-left pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-800 flex items-center justify-between"
               >
                 Offerings
                 <svg
-                  className={`w-4 h-4 transition-transform ${isOfferingsOpen ? 'rotate-180' : ''}`}
+                  className={`w-4 h-4 transition-transform duration-300 ${isOfferingsOpen ? 'rotate-180' : ''}`}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -184,9 +229,19 @@ function Navbar() {
             >
               Credentials
             </Link>
+
+            {/* Language selection on mobile */}
+            <div className="flex items-center space-x-2 pl-3 py-2 text-gray-600 text-sm">
+              <span className="text-primary font-medium cursor-pointer">English</span>
+              <span>|</span>
+              <Flag code="IN" style={{ width: 16, height: 12 }} alt="Indian Flag" />
+            </div>
           </div>
         </div>
       </nav>
+
+      {/* Spacer to prevent content from hiding under fixed navbar */}
+      <div className="h-16 md:h-20"></div>
 
       {/* Full screen offerings dropdown */}
       <OfferingsDropdown isOpen={isOfferingsOpen} onClose={closeOfferingsDropdown} />

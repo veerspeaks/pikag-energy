@@ -39,8 +39,8 @@ const Footer = () => {
                             <ul className="space-y-3 text-left">
                                 <li><a href="https://www.lk-ea.com/" className="text-base hover:text-primary transition-colors">Laurtiz Knudsen</a></li>
                                 <li><a href="https://automation.omron.com/en/mx/products/category/robotics" className="text-base hover:text-primary transition-colors">Omron</a></li>
-                                <li><a href="https://waaree.com/" className="text-base hover:text-primary transition-colors">Tata Power</a></li>
-                                <li><a href="https://www.maevic.com/" className="text-base hover:text-primary transition-colors">Maevic</a></li>
+                                <li><a href="https://www.tatapower.com/" className="text-base hover:text-primary transition-colors">Tata Power</a></li>
+                                <li><a href="https://www.maestrotek-innovation.com/index.html" className="text-base hover:text-primary transition-colors">Maestrotek</a></li>
                                 <li><a href="https://www.fujielectric.com/" className="text-base hover:text-primary transition-colors">Fuji Electric</a></li>
                             </ul>
                         </div>
