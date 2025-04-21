@@ -11,6 +11,7 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import Credentials from './pages/Credentials';
+import Downloads from './pages/Downloads';
 import OmronSolutionsPage from './pages/OmronSolutionsPage';
 import ProductDetail from './pages/ProductDetail';
 import { PIKAG_PRODUCTS_MAP, PIKAG_PRODUCT_TYPES } from './constants/product_types';
@@ -43,6 +44,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/credentials" element={<Credentials />} />
+          <Route path="/downloads" element={<Downloads />} />
           <Route path="/products/laurtiz-knudsen" element={<Products productsMap={LK_PRODUCTS_MAP} productTypes={LK_PRODUCT_TYPES} pageName="laurtiz-knudsen" />} />
           <Route path="/products/pikag" element={<Products productsMap={PIKAG_PRODUCTS_MAP} productTypes={PIKAG_PRODUCT_TYPES} pageName="pikag" />} />
           <Route path="/products/omron" element={<Products productsMap={OMRON_PRODUCTS_MAP} productTypes={OMRON_PRODUCT_TYPES} pageName="omron" />} />

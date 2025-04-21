@@ -119,6 +119,15 @@ function Navbar() {
                 >
                   Credentials
                 </Link>
+                <Link
+                  to="/downloads"
+                  className={`${location.pathname === '/downloads'
+                    ? 'text-primary border-primary font-semibold'
+                    : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
+                >
+                  Downloads
+                </Link>
               </div>
             </div>
 
@@ -228,6 +237,16 @@ function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Credentials
+            </Link>
+            <Link
+              to="/downloads"
+              className={`${location.pathname === '/downloads'
+                ? 'bg-primary/10 border-primary text-primary'
+                : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+                } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Downloads
             </Link>
 
             {/* Language selection on mobile */}
