@@ -176,7 +176,7 @@ const Timeline = () => {
               ></div>
             </div>
 
-            <div className="h-[500px] relative overflow-hidden">
+            <div className="h-[550px] relative overflow-hidden">
               {timelineData.map((item, index) => (
                 <motion.div
                   key={index}
