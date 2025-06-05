@@ -62,7 +62,7 @@ const Footer = () => {
                             <a href="#" className="text-sm text-gray-600 hover:text-primary">Sitemap</a>
                             <a href="#" className="text-sm text-gray-600 hover:text-primary">Privacy Policy</a>
                         </div>
-                        <div className="text-sm text-gray-600 text-center sm:text-right mb-2">
+                        <div className="text-sm text-gray-600 text-center sm:text-right">
                             <span>This site is designed and developed by </span>
                             <a href="https://myhai.in" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
                                 Haldar AI & IT
