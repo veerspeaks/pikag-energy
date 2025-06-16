@@ -110,15 +110,7 @@ function Navbar() {
                 >
                   Contact
                 </Link>
-                <Link
-                  to="/credentials"
-                  className={`${location.pathname === '/credentials'
-                    ? 'text-primary border-primary font-semibold'
-                    : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
-                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
-                >
-                  Credentials
-                </Link>
+                
                 <Link
                   to="/downloads"
                   className={`${location.pathname === '/downloads'
@@ -127,6 +119,15 @@ function Navbar() {
                     } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
                 >
                   Downloads
+                </Link>
+                <Link
+                  to="/it-services"
+                  className={`${location.pathname === '/it-services'
+                    ? 'text-primary border-primary font-semibold'
+                    : 'text-gray-600 border-transparent hover:border-primary hover:text-dark'
+                    } inline-flex items-center px-1 pt-1 border-b-2 font-medium text-sm lg:text-base tracking-wide`}
+                >
+                  IT Services
                 </Link>
               </div>
             </div>
@@ -229,14 +230,14 @@ function Navbar() {
               Contact
             </Link>
             <Link
-              to="/credentials"
-              className={`${location.pathname === '/credentials'
+              to="/it-services"
+              className={`${location.pathname === '/it-services'
                 ? 'bg-primary/10 border-primary text-primary'
                 : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
                 } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Credentials
+              IT Services
             </Link>
             <Link
               to="/downloads"
@@ -248,19 +249,12 @@ function Navbar() {
             >
               Downloads
             </Link>
-
-            {/* Language selection on mobile */}
-            <div className="flex items-center space-x-2 pl-3 py-2 text-gray-600 text-sm">
-              <span className="text-primary font-medium cursor-pointer">English</span>
-              <span>|</span>
-              <Flag code="IN" style={{ width: 16, height: 12 }} alt="Indian Flag" />
-            </div>
           </div>
         </div>
       </nav>
 
-      {/* Spacer to prevent content from hiding under fixed navbar */}
-      <div className="h-16 md:h-20"></div>
+      {/* Spacer div to push content below fixed navbar */}
+      <div className="h-16 md:h-16"></div>
 
       {/* Full screen offerings dropdown */}
       <OfferingsDropdown isOpen={isOfferingsOpen} onClose={closeOfferingsDropdown} />

@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import Certifications from '../components/Credentials/Certifications';
+import Testimonials from '../components/Credentials/Testimonials';
+import AwardsAndRewards from '../components/Credentials/AwardsAndRewards';
+import Partners from '../components/Partners';
 
 const Downloads = () => {
   // Sample initial catalog data
@@ -54,16 +58,25 @@ const Downloads = () => {
   ]);
   return (
     <div className="bg-light min-h-screen">
+      {/* Downloads Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Downloads Center
+            Downloads & Credentials
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Access our product catalogs, technical documentation, and installation guides.
-            All resources are available in PDF format for your convenience.
+            Access our product catalogs, technical documentation, installation guides, and learn about our credentials.
           </p>
+        </div>
+
+        {/* Tab navigation for Downloads and Credentials */}
+        <div className="border-b border-gray-200 mb-8">
+          <div className="flex space-x-8">
+            <button className="border-b-2 border-primary text-primary font-medium py-4 px-1 focus:outline-none">
+              Downloads
+            </button>
+          </div>
         </div>
 
         {/* Catalog Grid */}
@@ -114,6 +127,27 @@ const Downloads = () => {
               info@pikag.com
             </a>
           </p>
+        </div>
+      </div>
+
+      {/* Credentials Section */}
+      <div className=" pb-8">
+        
+        
+        {/* Certifications Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Certifications />
+        </div>
+
+        {/* Testimonials Section */}
+        <Testimonials />
+
+        {/* Partners Section */}
+        <Partners />
+
+        {/* Awards and Rewards Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <AwardsAndRewards />
         </div>
       </div>
     </div>
