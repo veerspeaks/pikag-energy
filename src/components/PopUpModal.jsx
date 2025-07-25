@@ -23,7 +23,7 @@ const PopUpModal = ({ onClose }) => {
             />
           </svg>
         </button>
-        <img src="https://firebasestorage.googleapis.com/v0/b/pikag-318b9.firebasestorage.app/o/WhatsApp%20Image%202025-07-25%20at%2017.34.49.jpeg?alt=media&token=fc09a278-a099-42df-9f82-c65f5e93274f" alt="Popup" className="w-full h-auto max-w-lg" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/pikag-318b9.firebasestorage.app/o/WhatsApp%20Image%202025-07-25%20at%2017.34.49.jpeg?alt=media&token=fc09a278-a099-42df-9f82-c65f5e93274f" alt="Popup" className="w-full h-auto max-w-md" />
       </div>
     </div>
   );
