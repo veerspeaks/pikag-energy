@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from './components/Navbar';
@@ -25,8 +25,11 @@ import WaterWastewaterSolution from './pages/WaterWastewaterSolution';
 import RoboticsSolution from './pages/RoboticsSolution';
 import RenewableEnergySolution from './pages/RenewableEnergySolution';
 import IoTSolution from './pages/IoTSolution';
+import PopUpModal from './components/PopUpModal';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -34,8 +37,13 @@ function App() {
     });
   }, []);
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="font-poppins">
+      {isModalOpen && <PopUpModal onClose={handleCloseModal} />}
       <Navbar />
       <EnquiryButton />
       <ScrollToTop />
